@@ -189,7 +189,7 @@
       <rect x="4" y="4" width="424" height="896" rx="67" fill="#121214"></rect>
       <rect x="-1" y="190" width="3" height="34" rx="1.5" fill="#3A3A3C"></rect><rect x="-1" y="248" width="3" height="60" rx="1.5" fill="#3A3A3C"></rect><rect x="-1" y="320" width="3" height="60" rx="1.5" fill="#3A3A3C"></rect><rect x="430" y="260" width="3" height="92" rx="1.5" fill="#3A3A3C"></rect>
       <g clip-path="url(#screen2)"><g transform="translate(15 15)">
-      <rect width="402" height="874" fill="#f6e7de"></rect>
+      <rect width="402" height="874" fill="#f2e6e2"></rect>
       <g clip-path="url(#vf2)"><g transform="translate(0 114)">
       <rect width="402" height="536" fill="#D9CDBF"></rect>
       <rect x="258" y="34" width="116" height="190" rx="4" fill="#F1ECE4" stroke="#C9BBAA" stroke-width="7"></rect>
@@ -213,24 +213,24 @@
       <path d="M186 280 q15 11 30 0" stroke="#794234" stroke-width="4" fill="none" stroke-linecap="round"></path>
       <rect x="143" y="186" width="116" height="144" fill="none" stroke="#FFFFFF" stroke-opacity=".9" stroke-width="1.5"></rect>
       <line x1="178" y1="246" x2="224" y2="246" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"></line>
-      <line x1="0" y1="178.7" x2="402" y2="178.7" stroke="#FFCCAB" stroke-opacity=".8" stroke-width="1.5" stroke-dasharray="7 6"></line><rect x="76.5" y="12" width="249" height="34" rx="17" fill="#6a5b51" fill-opacity=".86"></rect><text x="201" y="34" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="500" fill="#FFFFFF" text-anchor="middle">Tilt the camera down a little.</text></g></g>
+      <line x1="0" y1="178.7" x2="402" y2="178.7" stroke="#F2B8A3" stroke-opacity=".8" stroke-width="1.5" stroke-dasharray="7 6"></line><rect x="76.5" y="12" width="249" height="34" rx="17" fill="#66554e" fill-opacity=".86"></rect><text x="201" y="34" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="500" fill="#FFFFFF" text-anchor="middle">Tilt the camera down a little.</text></g></g>
       
-      <rect x="77" y="602" width="248" height="36" rx="18" fill="#655a53" fill-opacity=".78" stroke="rgba(255,255,255,.18)"></rect>
-      <text x="98" y="625" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF" text-anchor="middle">0.5</text><text x="139" y="625" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF" text-anchor="middle">1</text><rect x="159" y="606" width="42" height="28" rx="14" fill="#FFCCAB" fill-opacity=".72"></rect><text x="180" y="625" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF" text-anchor="middle">1.2×</text><text x="221" y="625" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF" text-anchor="middle">2</text><text x="262" y="625" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF" text-anchor="middle">4</text><text x="303" y="625" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF" text-anchor="middle">8</text>
+      <rect x="77" y="602" width="248" height="36" rx="18" fill="#625651" fill-opacity=".78" stroke="rgba(255,255,255,.18)"></rect>
+      <text x="98" y="625" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF" text-anchor="middle">0.5</text><text x="139" y="625" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF" text-anchor="middle">1</text><rect x="159" y="606" width="42" height="28" rx="14" fill="#F2B8A3" fill-opacity=".72"></rect><text x="180" y="625" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF" text-anchor="middle">1.2×</text><text x="221" y="625" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF" text-anchor="middle">2</text><text x="262" y="625" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF" text-anchor="middle">4</text><text x="303" y="625" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF" text-anchor="middle">8</text>
       
-      <circle cx="38" cy="88" r="19" fill="#f8ede6" stroke="rgba(255,255,255,.95)"></circle><g transform="translate(38 88)"><path d="M-2 -9 L-7 1 H-1 L-3 9 L6 -2 H0 L2 -9 Z" fill="none" stroke="#1C1C1E" stroke-width="1.8" stroke-linejoin="round"></path><path d="M-8 -8 L8 8" stroke="#1C1C1E" stroke-width="1.8" stroke-linecap="round"></path></g>
-      <rect x="126" y="71" width="150" height="34" rx="17" fill="#f8ede6" stroke="rgba(255,255,255,.95)"></rect>
+      <circle cx="38" cy="88" r="19" fill="#f6ece9" stroke="rgba(255,255,255,.95)"></circle><g transform="translate(38 88)"><path d="M-2 -9 L-7 1 H-1 L-3 9 L6 -2 H0 L2 -9 Z" fill="none" stroke="#1C1C1E" stroke-width="1.8" stroke-linejoin="round"></path><path d="M-8 -8 L8 8" stroke="#1C1C1E" stroke-width="1.8" stroke-linecap="round"></path></g>
+      <rect x="126" y="71" width="150" height="34" rx="17" fill="#f6ece9" stroke="rgba(255,255,255,.95)"></rect>
       <g transform="translate(148 88)"><circle r="7" fill="none" stroke="#1C1C1E" stroke-width="1.6"></circle><circle cx="-2.4" cy="-1.6" r="1" fill="#1C1C1E"></circle><circle cx="2.4" cy="-1.6" r="1" fill="#1C1C1E"></circle><path d="M-3.2 1.8 Q0 4.6 3.2 1.8" fill="none" stroke="#1C1C1E" stroke-width="1.4" stroke-linecap="round"></path></g>
       <text x="164" y="93" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#1C1C1E" text-anchor="start">RAW · 48 MP</text>
       
       <path d="M252 86 l4 4 l4 -4" fill="none" stroke="#1C1C1E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
-      <circle cx="364" cy="88" r="19" fill="#f8ede6" stroke="rgba(255,255,255,.95)"></circle><g transform="translate(364 88)"><path d="M-9 -5 H9 M-9 0 H9 M-9 5 H9" stroke="#1C1C1E" stroke-width="1.8" stroke-linecap="round"></path><circle cx="-3" cy="-5" r="2.4" fill="#1C1C1E"></circle><circle cx="4" cy="0" r="2.4" fill="#1C1C1E"></circle><circle cx="-1" cy="5" r="2.4" fill="#1C1C1E"></circle></g>
-      <rect x="121" y="686" width="160" height="32" rx="16" fill="#f8ede6" stroke="rgba(255,255,255,.95)"></rect>
+      <circle cx="364" cy="88" r="19" fill="#f6ece9" stroke="rgba(255,255,255,.95)"></circle><g transform="translate(364 88)"><path d="M-9 -5 H9 M-9 0 H9 M-9 5 H9" stroke="#1C1C1E" stroke-width="1.8" stroke-linecap="round"></path><circle cx="-3" cy="-5" r="2.4" fill="#1C1C1E"></circle><circle cx="4" cy="0" r="2.4" fill="#1C1C1E"></circle><circle cx="-1" cy="5" r="2.4" fill="#1C1C1E"></circle></g>
+      <rect x="121" y="686" width="160" height="32" rx="16" fill="#f6ece9" stroke="rgba(255,255,255,.95)"></rect>
       <rect x="124" y="689" width="70" height="26" rx="13" fill="#1C1C1E" fill-opacity=".08"></rect>
-      <text x="159" y="707" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" fill="#C7662E" text-anchor="middle" letter-spacing="1.2" fill-opacity="1">PHOTO</text>
+      <text x="159" y="707" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" fill="#B0614A" text-anchor="middle" letter-spacing="1.2" fill-opacity="1">PHOTO</text>
       <text x="240" y="707" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" fill="#1C1C1E" text-anchor="middle" letter-spacing="1.2" fill-opacity=".8">PORTRAIT</text>
-      <circle cx="201" cy="733" r="4" fill="#C7662E" opacity="0"></circle>
-      <circle cx="201" cy="772" r="33" fill="none" stroke="#C7662E" stroke-width="3.5"></circle>
+      <circle cx="201" cy="733" r="4" fill="#B0614A" opacity="0"></circle>
+      <circle cx="201" cy="772" r="33" fill="none" stroke="#B0614A" stroke-width="3.5"></circle>
       <circle cx="201" cy="772" r="27" fill="#FFFFFF" stroke="rgba(0,0,0,.06)"></circle>
       <g clip-path="url(#th2)"><g transform="translate(44 750) scale(0.1095)"><g transform="translate(0 -114)">
       <rect width="402" height="536" fill="#D9CDBF"></rect>
@@ -256,8 +256,8 @@
       
       
       </g></g></g>
-      <rect x="44" y="750" width="44" height="44" rx="9" fill="none" stroke="#C7662E" stroke-opacity=".7"></rect>
-      <circle cx="358" cy="772" r="22" fill="#f8ede6" stroke="rgba(255,255,255,.95)"></circle><g transform="translate(358 772)"><path d="M-7 -1 A7 7 0 0 1 5 -5" fill="none" stroke="#1C1C1E" stroke-width="1.8" stroke-linecap="round"></path><path d="M5 -9 L6 -4.5 L1.5 -3.5" fill="none" stroke="#1C1C1E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path><path d="M7 1 A7 7 0 0 1 -5 5" fill="none" stroke="#1C1C1E" stroke-width="1.8" stroke-linecap="round"></path><path d="M-5 9 L-6 4.5 L-1.5 3.5" fill="none" stroke="#1C1C1E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></g>
+      <rect x="44" y="750" width="44" height="44" rx="9" fill="none" stroke="#B0614A" stroke-opacity=".7"></rect>
+      <circle cx="358" cy="772" r="22" fill="#f6ece9" stroke="rgba(255,255,255,.95)"></circle><g transform="translate(358 772)"><path d="M-7 -1 A7 7 0 0 1 5 -5" fill="none" stroke="#1C1C1E" stroke-width="1.8" stroke-linecap="round"></path><path d="M5 -9 L6 -4.5 L1.5 -3.5" fill="none" stroke="#1C1C1E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path><path d="M7 1 A7 7 0 0 1 -5 5" fill="none" stroke="#1C1C1E" stroke-width="1.8" stroke-linecap="round"></path><path d="M-5 9 L-6 4.5 L-1.5 3.5" fill="none" stroke="#1C1C1E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></g>
       <rect x="140" y="11" width="122" height="36" rx="18" fill="#000000"></rect>
       <rect x="134" y="859" width="134" height="5" rx="2.5" fill="#000000" fill-opacity=".85"></rect></g></g>
     </svg></g>

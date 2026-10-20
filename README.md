@@ -18,7 +18,7 @@ Ars Imaginis is an iPhone camera that coaches you while you photograph someone. 
 - **People, animals, and still subjects.** People get the full coaching set. Animals mode keeps pets centered and fully in frame. Still Subjects turns coaching off for food, objects, and places.
 - **Uncompromising quality.** Every photo goes through Apple's highest-quality processing and is saved exactly as the camera captured it, with the same metadata as the built-in Camera. RAW, HEIF, and JPEG at up to 48 MP, and zoom never invents pixels the sensor did not capture.
 - **Portrait and looks, always on a copy.** Portrait saves full-resolution depth and a second photo with adjustable background blur. Eight color looks come with guidance for different skin undertones and light. The original is never changed.
-- **Every lens.** Ultra wide, wide, and telephoto, optional 28 mm and 35 mm framings, and Auto Macro for close-ups.
+- **Every lens.** Ultra wide, wide, and telephoto, optional 28 mm and 35 mm framings, and Auto Macro for close-ups. Selfies get the same coaching, zoom buttons, and an optional Mirror Front Camera setting.
 - **Steady and automatic.** A dot lights up when the phone is steady enough for a sharp photo, and auto-capture can take the shot when everything is right. A courtesy flash lets the person you're photographing know the photo was taken.
 - **Familiar controls.** Tap to focus and slide to adjust brightness, plus manual shutter, ISO, white balance, and focus.
 - **Yours.** Six color themes in light or dark, alternate app icons, remembered settings, a session gallery, a tour, and a full user guide.

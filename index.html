@@ -356,7 +356,7 @@ footer .wrap { display: flex; gap: 16px; flex-wrap: wrap; justify-content: space
   const ICONS = [{"group": "main", "id": "AppIcon", "label": "Glass lens"}, {"group": "main", "id": "AppIcon-Dark", "label": "Glass lens, dark"}, {"group": "main", "id": "AppIcon-Tinted", "label": "Glass lens, tinted"}, {"group": "Lenses", "id": "Lens-Teal", "label": "Teal"}, {"group": "Lenses", "id": "Lens-PeachField", "label": "Peach field"}, {"group": "Lenses", "id": "Lens-SandIris", "label": "Sand iris"}, {"group": "Lenses", "id": "Lens-DeepTeal", "label": "Deep teal"}, {"group": "Lenses", "id": "Lens-CreamBarrel", "label": "Cream barrel"}, {"group": "Lenses", "id": "Lens-PeachRing", "label": "Peach ring"}, {"group": "Lenses", "id": "Lens-RingedSand", "label": "Ringed sand"}, {"group": "Camera", "id": "Camera-Shutter", "label": "Shutter portrait"}, {"group": "Camera", "id": "Camera-AperturePortrait", "label": "Aperture portrait"}, {"group": "Camera", "id": "Camera-Portrait", "label": "Portrait camera"}, {"group": "Camera", "id": "Camera-FramedLens", "label": "Framed lens"}, {"group": "Camera", "id": "Camera-Aperture", "label": "Aperture"}, {"group": "Camera", "id": "Camera-Retro", "label": "Retro camera"}, {"group": "Camera", "id": "Camera-InstantPrint", "label": "Instant print"}, {"group": "Portrait arch", "id": "Arch-Classic", "label": "Classic"}, {"group": "Portrait arch", "id": "Arch-FocusBrackets", "label": "Focus brackets"}, {"group": "Portrait arch", "id": "Arch-Spotlight", "label": "Spotlight"}, {"group": "Portrait arch", "id": "Arch-Cameo", "label": "Cameo"}, {"group": "Portrait arch", "id": "Arch-PeachField", "label": "Peach field"}, {"group": "Portrait arch", "id": "Arch-DeepTeal", "label": "Deep teal"}, {"group": "Portrait arch", "id": "Arch-Spiral", "label": "Gallery spiral"}, {"group": "Golden spiral", "id": "Spiral-Bold", "label": "Bold"}, {"group": "Golden spiral", "id": "Spiral-Turned", "label": "Turned"}, {"group": "Golden spiral", "id": "Spiral-PeachField", "label": "Peach field"}, {"group": "Golden spiral", "id": "Spiral-CreamLine", "label": "Cream line"}, {"group": "Golden spiral", "id": "Spiral-LensRing", "label": "Lens ring"}, {"group": "Golden spiral", "id": "Spiral-DeepTeal", "label": "Deep teal"}, {"group": "Golden spiral", "id": "Spiral-LightSand", "label": "Light sand"}];
 
   const THEMES = {
-    peach: { name: "Peach", pastel: "#FFCCAB", deep: "#C7662E" },
+    peach: { name: "Peach", pastel: "#F2B8A3", deep: "#B0614A" },
     blush: { name: "Blush", pastel: "#FFC0D7", deep: "#CC4A80" },
     lavender: { name: "Lavender", pastel: "#CCBAFF", deep: "#755CCC" },
     mint: { name: "Mint", pastel: "#A8E8CF", deep: "#1F8766" },
@@ -369,6 +369,7 @@ footer .wrap { display: flex; gap: 16px; flex-wrap: wrap; justify-content: space
     great: { name: "Looks great", title: "Ready when you are", text: "When the framing is right, the app says so. A small dot above the shutter lights up when the phone is steady enough for a sharp photo." },
     menu: { name: "Quick menu", title: "Everything in one pill", text: "Tap the pill at the top to switch subjects (people, animals, or still subjects), change format, resolution, and shape, and turn on Portrait, auto-capture, or the manual controls." },
     portrait: { name: "Portrait", title: "Portrait with adjustable blur", text: "Portrait saves depth inside the original at full resolution and a second copy with the background blurred. The blur can also be changed later in the Photos app." },
+    selfie: { name: "Selfies", title: "Selfies, coached too", text: "On the front camera the viewfinder works like a mirror, and the portrait guides follow your face. Tap 1, 1.5, or 2 to frame tighter. Turn on Mirror Front Camera to save selfies exactly as they look in the viewfinder, or leave it off to save them the way others see you, like Apple's Camera." },
     animals: { name: "Animals", title: "Animals too", text: "Switch to Animals and the app finds the animal, boxes it, and helps you keep it centered, close enough, and fully in frame. Hank the rabbit is ready for his picture!" },
     settings: { name: "Themes and icons", title: "Make it yours", text: "Six color themes, light or dark appearance, and a picker of alternate app icons. Peach is the default." },
   };
@@ -381,6 +382,7 @@ footer .wrap { display: flex; gap: 16px; flex-wrap: wrap; justify-content: space
     ["Quality", "The whole photo in the viewfinder", "What you see is exactly what you get. 16:9 and 1:1 shade the viewfinder instead of cropping, so the original keeps its full frame."],
     ["Quality", "RAW, HEIF, and JPEG at up to 48 MP", "Apple ProRAW, HEIF, HEIF with RAW, and JPEG, at 12, 24, or 48 MP. Zoom never invents pixels the sensor did not capture."],
     ["Lenses", "Every lens, plus 28 and 35 mm", "Ultra wide, wide, and telephoto, with optional 28 mm and 35 mm framings and a choice of which lens the app opens at."],
+    ["Lenses", "Selfies, coached too", "On the front camera the guides follow your face in a mirror-style viewfinder, with 1, 1.5, and 2 zoom buttons and an optional Mirror Front Camera setting."],
     ["Lenses", "Auto Macro", "Get close and the app switches to the ultra wide lens for macro focus, keeping the same framing, just like Apple's Camera."],
     ["Creative", "Portrait mode", "Depth saved at full resolution with the LiDAR camera, plus a second copy with adjustable background blur."],
     ["Creative", "Looks with skin-tone guidance", "Eight color looks, fine-tuning sliders, and advice organized by undertone and light. Looks always go on a separate copy."],
@@ -539,21 +541,23 @@ footer .wrap { display: flex; gap: 16px; flex-wrap: wrap; justify-content: space
     const animals = screen === "animals";
 
     let scene;
-    if (screen === "great") scene = sceneCoach(accP, true);
+    const selfie = screen === "selfie";
+    if (screen === "great" || selfie) scene = sceneCoach(accP, true);
     else if (screen === "portrait") scene = scenePortrait(id);
     else if (screen === "animals") scene = sceneAnimal();
     else scene = sceneCoach(accP, false);
 
     let hint = "";
     if (screen === "coach") hint = "Tilt the camera down a little.";
-    if (screen === "great") hint = "Looking great. Press the shutter.";
+    if (screen === "great" || selfie) hint = "Looking great. Press the shutter.";
     if (screen === "animals") hint = "Move closer or zoom in.";
     const hintSvg = hint ? `<rect x="${201 - (hint.length * 3.55 + 18)}" y="12" width="${hint.length * 7.1 + 36}" height="34" rx="17" fill="${mix("#2A2A2A", accP, .3)}" fill-opacity=".86"/>${text(201, 34, hint, 13, "#FFFFFF", 500)}` : "";
 
-    const labels = ["0.5", "1", "1.2×", "2", "4", "8"];
+    const labels = selfie ? ["1×", "1.5", "2"] : ["0.5", "1", "1.2×", "2", "4", "8"];
+    const lensStart = selfie ? 160 : 98;
     const lens = labels.map((l, i) => {
-      const x = 98 + i * 41;
-      const sel = i === 2;
+      const x = lensStart + i * 41;
+      const sel = i === (selfie ? 0 : 2);
       return `${sel ? `<rect x="${x - 21}" y="606" width="42" height="28" rx="14" fill="${accP}" fill-opacity=".72"/>` : ""}${text(x, 625, l, 13, "#FFFFFF", 600)}`;
     }).join("");
 
@@ -577,7 +581,7 @@ footer .wrap { display: flex; gap: 16px; flex-wrap: wrap; justify-content: space
       <rect width="402" height="874" fill="${bars}"/>
       <g clip-path="url(#vf${id})"><g transform="translate(0 114)">${scene}${hintSvg}</g>${dim}</g>
       ${portraitStatus}
-      <rect x="77" y="602" width="248" height="36" rx="18" fill="${mix("#3A3A3A", accP, .22)}" fill-opacity=".78" stroke="rgba(255,255,255,.18)"/>
+      <rect x="${selfie ? 134 : 77}" y="602" width="${selfie ? 134 : 248}" height="36" rx="18" fill="${mix("#3A3A3A", accP, .22)}" fill-opacity=".78" stroke="rgba(255,255,255,.18)"/>
       ${lens}
       ${menu}
       <circle cx="38" cy="88" r="19" fill="${glassFill}" stroke="${glassStroke}"/>${g(38, 88, glyph.flashOff(ink))}
