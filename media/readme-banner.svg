@@ -1,0 +1,264 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 760" width="1600" height="760" role="img" aria-label="Ars Imaginis: an iPhone camera that coaches you to take better photos of people. Designed and developed by Alyssa I. Agard.">
+<rect width="1600" height="760" rx="36" fill="#F6EDE6"/>
+<text x="96" y="250" font-family="Georgia, 'Times New Roman', serif" font-size="84" letter-spacing="1" word-spacing="5" fill="#0B2E30">Ars Imaginis</text>
+<text x="100" y="330" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="34" fill="#2F4A4B">A camera that coaches you to take</text>
+<text x="100" y="376" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="34" fill="#2F4A4B">better photos of the people you love.</text>
+<rect x="100" y="430" width="300" height="64" rx="32" fill="#12474A"/>
+<text x="250" y="471" text-anchor="middle" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="24" font-weight="600" fill="#FFFFFF">iPhone · iOS 26</text>
+<text x="100" y="640" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="24" fill="#5E6F6E">Designed and developed by Alyssa I. Agard</text>
+<g transform="translate(860 120) rotate(-6 125 261.5740740740741)"><svg x="0" y="0" width="250" height="523.1481481481482" viewBox="0 0 432 904" xmlns="http://www.w3.org/2000/svg" role="presentation">
+      <defs><clipPath id="screen1"><rect x="15" y="15" width="402" height="874" rx="56"></rect></clipPath><clipPath id="vf1"><rect x="0" y="114" width="402" height="536"></rect></clipPath><clipPath id="th1"><rect x="44" y="750" width="44" height="44" rx="9"></rect></clipPath></defs>
+      <rect x="1" y="1" width="430" height="902" rx="70" fill="#3A3A3C"></rect>
+      <rect x="4" y="4" width="424" height="896" rx="67" fill="#121214"></rect>
+      <rect x="-1" y="190" width="3" height="34" rx="1.5" fill="#3A3A3C"></rect><rect x="-1" y="248" width="3" height="60" rx="1.5" fill="#3A3A3C"></rect><rect x="-1" y="320" width="3" height="60" rx="1.5" fill="#3A3A3C"></rect><rect x="430" y="260" width="3" height="92" rx="1.5" fill="#3A3A3C"></rect>
+      <g clip-path="url(#screen1)"><g transform="translate(15 15)">
+      <rect width="402" height="874" fill="#11151a"></rect>
+      <g clip-path="url(#vf1)"><g transform="translate(0 114)">
+      <defs><filter id="blur1" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="9"></feGaussianBlur></filter></defs>
+      <g filter="url(#blur1)">
+        <rect width="402" height="536" fill="#2F4B4A"></rect>
+        <circle cx="60" cy="90" r="34" fill="#F2C38A" opacity=".85"></circle><circle cx="330" cy="70" r="26" fill="#F2B8A2" opacity=".8"></circle>
+        <circle cx="356" cy="210" r="40" fill="#E7D08F" opacity=".7"></circle><circle cx="40" cy="260" r="28" fill="#F6EDE6" opacity=".55"></circle>
+        <circle cx="300" cy="330" r="30" fill="#F2C38A" opacity=".6"></circle><circle cx="90" cy="430" r="44" fill="#86A88F" opacity=".7"></circle>
+        <rect x="0" y="420" width="402" height="116" fill="#24403F"></rect>
+      </g>
+      <ellipse cx="201" cy="196" rx="70" ry="76" fill="#7A3B1C"></ellipse>
+      
+      <path d="M51 536 Q61 314 201 308 Q341 314 351 536 Z" fill="#E7D6C2"></path>
+      <rect x="181" y="256" width="40" height="56" rx="14" fill="#b99072"></rect>
+      <ellipse cx="149" cy="216" rx="9" ry="14" fill="#b99072"></ellipse>
+      <ellipse cx="253" cy="216" rx="9" ry="14" fill="#b99072"></ellipse>
+      
+      <ellipse cx="201" cy="212" rx="50" ry="62" fill="#E2AF8B"></ellipse>
+      <path d="M149 194 Q171 138 209 150 Q245 156 253 192 Q231 168 201 172 Q171 174 149 194 Z" fill="#7A3B1C"></path>
+      <path d="M171 187 q12 -6 22 0 M209 187 q10 -6 22 0" stroke="#622f16" stroke-width="3.5" fill="none" stroke-linecap="round"></path>
+      <ellipse cx="182" cy="200" rx="5.5" ry="4" fill="#1D1411"></ellipse>
+      <ellipse cx="220" cy="200" rx="5.5" ry="4" fill="#1D1411"></ellipse>
+      <path d="M198 210 q3 12 -2 16" stroke="#b99072" stroke-width="3" fill="none" stroke-linecap="round"></path>
+      <path d="M186 234 q15 11 30 0" stroke="#a16858" stroke-width="4" fill="none" stroke-linecap="round"></path></g></g>
+      <rect x="146" y="566" width="110" height="26" rx="13" fill="#4a555f" fill-opacity=".85"></rect><g transform="translate(166 579)"><circle r="6.5" fill="none" stroke="#A8D4FF" stroke-width="1.6"></circle><path d="M-2 -6 L4 -1 M4 -4.5 L1 4 M5 2 L-4 3 M-0.5 6 L-4.5 -1 M-6 1.5 L-1 -6" stroke="#A8D4FF" stroke-width="1.2"></path></g><text x="209" y="584" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="600" fill="#A8D4FF" text-anchor="middle">Portrait</text>
+      <rect x="77" y="602" width="248" height="36" rx="18" fill="#525c65" fill-opacity=".78" stroke="rgba(255,255,255,.18)"></rect>
+      <text x="98" y="625" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF" text-anchor="middle">0.5</text><text x="139" y="625" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF" text-anchor="middle">1</text><rect x="159" y="606" width="42" height="28" rx="14" fill="#A8D4FF" fill-opacity=".72"></rect><text x="180" y="625" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF" text-anchor="middle">1.2×</text><text x="221" y="625" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF" text-anchor="middle">2</text><text x="262" y="625" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF" text-anchor="middle">4</text><text x="303" y="625" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF" text-anchor="middle">8</text>
+      
+      <circle cx="38" cy="88" r="19" fill="#404c59" stroke="rgba(255,255,255,.14)"></circle><g transform="translate(38 88)"><path d="M-2 -9 L-7 1 H-1 L-3 9 L6 -2 H0 L2 -9 Z" fill="none" stroke="#F2F2F2" stroke-width="1.8" stroke-linejoin="round"></path><path d="M-8 -8 L8 8" stroke="#F2F2F2" stroke-width="1.8" stroke-linecap="round"></path></g>
+      <rect x="110" y="71" width="182" height="34" rx="17" fill="#404c59" stroke="rgba(255,255,255,.14)"></rect>
+      <g transform="translate(132 88)"><circle r="7" fill="none" stroke="#F2F2F2" stroke-width="1.6"></circle><circle cx="-2.4" cy="-1.6" r="1" fill="#F2F2F2"></circle><circle cx="2.4" cy="-1.6" r="1" fill="#F2F2F2"></circle><path d="M-3.2 1.8 Q0 4.6 3.2 1.8" fill="none" stroke="#F2F2F2" stroke-width="1.4" stroke-linecap="round"></path></g>
+      <text x="148" y="93" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#F2F2F2" text-anchor="start">HEIF · 48 MP</text>
+      <g transform="translate(252 88)"><circle r="6.5" fill="none" stroke="#F2F2F2" stroke-width="1.6"></circle><path d="M-2 -6 L4 -1 M4 -4.5 L1 4 M5 2 L-4 3 M-0.5 6 L-4.5 -1 M-6 1.5 L-1 -6" stroke="#F2F2F2" stroke-width="1.2"></path></g>
+      <path d="M268 86 l4 4 l4 -4" fill="none" stroke="#F2F2F2" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+      <circle cx="364" cy="88" r="19" fill="#404c59" stroke="rgba(255,255,255,.14)"></circle><g transform="translate(364 88)"><path d="M-9 -5 H9 M-9 0 H9 M-9 5 H9" stroke="#F2F2F2" stroke-width="1.8" stroke-linecap="round"></path><circle cx="-3" cy="-5" r="2.4" fill="#F2F2F2"></circle><circle cx="4" cy="0" r="2.4" fill="#F2F2F2"></circle><circle cx="-1" cy="5" r="2.4" fill="#F2F2F2"></circle></g>
+      <rect x="121" y="686" width="160" height="32" rx="16" fill="#404c59" stroke="rgba(255,255,255,.14)"></rect>
+      <rect x="201" y="689" width="77" height="26" rx="13" fill="#F2F2F2" fill-opacity=".08"></rect>
+      <text x="159" y="707" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" fill="#F2F2F2" text-anchor="middle" letter-spacing="1.2" fill-opacity=".8">PHOTO</text>
+      <text x="240" y="707" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" fill="#A8D4FF" text-anchor="middle" letter-spacing="1.2" fill-opacity="1">PORTRAIT</text>
+      <circle cx="201" cy="733" r="4" fill="#A8D4FF" opacity="0"></circle>
+      <circle cx="201" cy="772" r="33" fill="none" stroke="#A8D4FF" stroke-width="3.5"></circle>
+      <circle cx="201" cy="772" r="27" fill="#A8D4FF"></circle>
+      <g clip-path="url(#th1)"><g transform="translate(44 750) scale(0.1095)"><g transform="translate(0 -114)">
+      <rect width="402" height="536" fill="#D9CDBF"></rect>
+      <rect x="258" y="34" width="116" height="190" rx="4" fill="#F1ECE4" stroke="#C9BBAA" stroke-width="7"></rect>
+      <path d="M316 34V224M258 129H374" stroke="#C9BBAA" stroke-width="5"></path>
+      <rect x="0" y="424" width="402" height="112" fill="#CDBFAF"></rect>
+      <g fill="#6F8D69"><ellipse cx="52" cy="330" rx="15" ry="44" transform="rotate(-22 52 330)"></ellipse><ellipse cx="74" cy="322" rx="15" ry="46" transform="rotate(18 74 322)"></ellipse><ellipse cx="62" cy="300" rx="13" ry="40"></ellipse></g>
+      <rect x="34" y="364" width="58" height="66" rx="8" fill="#B07E55"></rect>
+      <ellipse cx="201" cy="192" rx="70" ry="76" fill="#21160F"></ellipse>
+      <circle cx="201" cy="116" r="30" fill="#21160F"></circle>
+      <path d="M51 536 Q61 310 201 304 Q341 310 351 536 Z" fill="#3E6A6C"></path>
+      <rect x="181" y="252" width="40" height="56" rx="14" fill="#714a31"></rect>
+      <ellipse cx="149" cy="212" rx="9" ry="14" fill="#714a31"></ellipse>
+      <ellipse cx="253" cy="212" rx="9" ry="14" fill="#714a31"></ellipse>
+      <circle cx="149" cy="234" r="9" fill="none" stroke="#D9B45A" stroke-width="3"></circle><circle cx="253" cy="234" r="9" fill="none" stroke="#D9B45A" stroke-width="3"></circle>
+      <ellipse cx="201" cy="208" rx="50" ry="62" fill="#8A5A3C"></ellipse>
+      
+      <path d="M171 183 q12 -6 22 0 M209 183 q10 -6 22 0" stroke="#1a120c" stroke-width="3.5" fill="none" stroke-linecap="round"></path>
+      <ellipse cx="182" cy="196" rx="5.5" ry="4" fill="#1D1411"></ellipse>
+      <ellipse cx="220" cy="196" rx="5.5" ry="4" fill="#1D1411"></ellipse>
+      <path d="M198 206 q3 12 -2 16" stroke="#714a31" stroke-width="3" fill="none" stroke-linecap="round"></path>
+      <path d="M186 230 q15 11 30 0" stroke="#794234" stroke-width="4" fill="none" stroke-linecap="round"></path>
+      
+      
+      </g></g></g>
+      <rect x="44" y="750" width="44" height="44" rx="9" fill="none" stroke="#A8D4FF" stroke-opacity=".7"></rect>
+      <circle cx="358" cy="772" r="22" fill="#404c59" stroke="rgba(255,255,255,.14)"></circle><g transform="translate(358 772)"><path d="M-7 -1 A7 7 0 0 1 5 -5" fill="none" stroke="#F2F2F2" stroke-width="1.8" stroke-linecap="round"></path><path d="M5 -9 L6 -4.5 L1.5 -3.5" fill="none" stroke="#F2F2F2" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path><path d="M7 1 A7 7 0 0 1 -5 5" fill="none" stroke="#F2F2F2" stroke-width="1.8" stroke-linecap="round"></path><path d="M-5 9 L-6 4.5 L-1.5 3.5" fill="none" stroke="#F2F2F2" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></g>
+      <rect x="140" y="11" width="122" height="36" rx="18" fill="#000000"></rect>
+      <rect x="134" y="859" width="134" height="5" rx="2.5" fill="#FFFFFF" fill-opacity=".85"></rect></g></g>
+    </svg></g>
+<g transform="translate(1280 120) rotate(6 125 261.5740740740741)"><svg x="0" y="0" width="250" height="523.1481481481482" viewBox="0 0 432 904" xmlns="http://www.w3.org/2000/svg" role="presentation">
+      <defs><clipPath id="screen3"><rect x="15" y="15" width="402" height="874" rx="56"></rect></clipPath><clipPath id="vf3"><rect x="0" y="114" width="402" height="536"></rect></clipPath><clipPath id="th3"><rect x="44" y="750" width="44" height="44" rx="9"></rect></clipPath></defs>
+      <rect x="1" y="1" width="430" height="902" rx="70" fill="#3A3A3C"></rect>
+      <rect x="4" y="4" width="424" height="896" rx="67" fill="#121214"></rect>
+      <rect x="-1" y="190" width="3" height="34" rx="1.5" fill="#3A3A3C"></rect><rect x="-1" y="248" width="3" height="60" rx="1.5" fill="#3A3A3C"></rect><rect x="-1" y="320" width="3" height="60" rx="1.5" fill="#3A3A3C"></rect><rect x="430" y="260" width="3" height="92" rx="1.5" fill="#3A3A3C"></rect>
+      <g clip-path="url(#screen3)"><g transform="translate(15 15)">
+      <rect width="402" height="874" fill="#dbece7"></rect>
+      <g clip-path="url(#vf3)"><g transform="translate(0 114)">
+      <rect width="402" height="536" fill="#E6DED6"/>
+      <rect x="250" y="0" width="152" height="330" fill="#D8CEC6"/>
+      <path d="M262 0V330M300 0V330M338 0V330" stroke="#CFC4BB" stroke-width="3"/>
+      <rect x="0" y="330" width="402" height="206" fill="#CFCBD8"/>
+      <g fill="#A9B3CC" opacity=".55"><circle cx="40" cy="360" r="5"/><circle cx="96" cy="350" r="3"/><circle cx="330" cy="372" r="6"/><circle cx="372" cy="352" r="3"/><circle cx="60" cy="500" r="6"/><circle cx="352" cy="492" r="5"/><circle cx="296" cy="520" r="3"/></g>
+      <ellipse cx="190" cy="430" rx="132" ry="54" fill="#D6C7BF"/>
+      <ellipse cx="190" cy="418" rx="104" ry="36" fill="#E6D9D1"/>
+      <path d="M86 418 q20 -26 50 -30 M294 418 q-20 -26 -50 -30" stroke="#CDBDB4" stroke-width="5" fill="none" stroke-linecap="round"/>
+      <ellipse cx="190" cy="372" rx="66" ry="58" fill="#1C1C21"/>
+      <path d="M128 360 q-6 -30 16 -50 M252 360 q6 -30 -16 -50" stroke="#34343C" stroke-width="4" fill="none" stroke-linecap="round"/>
+      <path d="M158 396 Q190 350 222 396 Q206 414 190 414 Q174 414 158 396 Z" fill="#F5F2EC"/>
+      <ellipse cx="168" cy="420" rx="12" ry="7" fill="#F5F2EC"/>
+      <ellipse cx="212" cy="420" rx="12" ry="7" fill="#F5F2EC"/>
+      <ellipse cx="190" cy="304" rx="46" ry="41" fill="#1C1C21"/>
+      <ellipse cx="146" cy="326" rx="17" ry="44" fill="#1C1C21" transform="rotate(14 146 326)"/>
+      <ellipse cx="234" cy="326" rx="17" ry="44" fill="#1C1C21" transform="rotate(-14 234 326)"/>
+      <path d="M140 296 q-4 30 4 58 M240 296 q4 30 -4 58" stroke="#34343C" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <path d="M184 268 Q190 262 196 268 L203 312 Q190 322 177 312 Z" fill="#F5F2EC"/>
+      <ellipse cx="190" cy="322" rx="22" ry="15" fill="#F5F2EC"/>
+      <ellipse cx="190" cy="328" rx="15" ry="8" fill="#EFE6D6"/>
+      <ellipse cx="175" cy="324" rx="6" ry="3.5" fill="#F2A9B4" opacity=".6"/>
+      <ellipse cx="205" cy="324" rx="6" ry="3.5" fill="#F2A9B4" opacity=".6"/>
+      <ellipse cx="190" cy="314" rx="4.5" ry="3.2" fill="#E8A2A9"/>
+      <path d="M190 317 v4 m0 0 q-4 4 -8 2 m8 -2 q4 4 8 2" stroke="#B9868A" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+      <circle cx="167" cy="298" r="7.5" fill="#14213F" stroke="#2A3550" stroke-width="1.2"/>
+      <circle cx="213" cy="298" r="7.5" fill="#14213F" stroke="#2A3550" stroke-width="1.2"/>
+      <circle cx="164.5" cy="295.5" r="2.3" fill="#FFFFFF"/>
+      <circle cx="210.5" cy="295.5" r="2.3" fill="#FFFFFF"/>
+      <circle cx="169.5" cy="300.8" r="1" fill="#FFFFFF" opacity=".85"/>
+      <circle cx="215.5" cy="300.8" r="1" fill="#FFFFFF" opacity=".85"/>
+      <g stroke="#E6E2DA" stroke-width="1" stroke-linecap="round" opacity=".75" fill="none">
+        <path d="M172 320 q-30 -6 -54 -2"/><path d="M172 324 q-28 2 -50 10"/><path d="M208 320 q30 -6 54 -2"/><path d="M208 324 q28 2 50 10"/>
+      </g>
+      <rect x="116" y="250" width="148" height="182" rx="14" fill="none" stroke="#FFFFFF" stroke-opacity=".9" stroke-width="1.5"/><rect x="101.35000000000001" y="12" width="199.29999999999998" height="34" rx="17" fill="#50635c" fill-opacity=".86"></rect><text x="201" y="34" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="500" fill="#FFFFFF" text-anchor="middle">Move closer or zoom in.</text></g></g>
+      
+      <rect x="77" y="602" width="248" height="36" rx="18" fill="#52605b" fill-opacity=".78" stroke="rgba(255,255,255,.18)"></rect>
+      <text x="98" y="625" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF" text-anchor="middle">0.5</text><text x="139" y="625" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF" text-anchor="middle">1</text><rect x="159" y="606" width="42" height="28" rx="14" fill="#A8E8CF" fill-opacity=".72"></rect><text x="180" y="625" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF" text-anchor="middle">1.2×</text><text x="221" y="625" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF" text-anchor="middle">2</text><text x="262" y="625" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF" text-anchor="middle">4</text><text x="303" y="625" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF" text-anchor="middle">8</text>
+      
+      <circle cx="38" cy="88" r="19" fill="#e4f1ed" stroke="rgba(255,255,255,.95)"></circle><g transform="translate(38 88)"><path d="M-2 -9 L-7 1 H-1 L-3 9 L6 -2 H0 L2 -9 Z" fill="none" stroke="#1C1C1E" stroke-width="1.8" stroke-linejoin="round"></path><path d="M-8 -8 L8 8" stroke="#1C1C1E" stroke-width="1.8" stroke-linecap="round"></path></g>
+      <rect x="126" y="71" width="150" height="34" rx="17" fill="#e4f1ed" stroke="rgba(255,255,255,.95)"></rect>
+      <g transform="translate(148 88)"><ellipse cy="2.5" rx="4.5" ry="3.8" fill="#1C1C1E"></ellipse><circle cx="-5" cy="-3" r="1.9" fill="#1C1C1E"></circle><circle cx="-1.8" cy="-6" r="1.9" fill="#1C1C1E"></circle><circle cx="1.8" cy="-6" r="1.9" fill="#1C1C1E"></circle><circle cx="5" cy="-3" r="1.9" fill="#1C1C1E"></circle></g>
+      <text x="164" y="93" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#1C1C1E" text-anchor="start">RAW · 48 MP</text>
+      
+      <path d="M252 86 l4 4 l4 -4" fill="none" stroke="#1C1C1E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+      <circle cx="364" cy="88" r="19" fill="#e4f1ed" stroke="rgba(255,255,255,.95)"></circle><g transform="translate(364 88)"><path d="M-9 -5 H9 M-9 0 H9 M-9 5 H9" stroke="#1C1C1E" stroke-width="1.8" stroke-linecap="round"></path><circle cx="-3" cy="-5" r="2.4" fill="#1C1C1E"></circle><circle cx="4" cy="0" r="2.4" fill="#1C1C1E"></circle><circle cx="-1" cy="5" r="2.4" fill="#1C1C1E"></circle></g>
+      <rect x="121" y="686" width="160" height="32" rx="16" fill="#e4f1ed" stroke="rgba(255,255,255,.95)"></rect>
+      <rect x="124" y="689" width="70" height="26" rx="13" fill="#1C1C1E" fill-opacity=".08"></rect>
+      <text x="159" y="707" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" fill="#1F8766" text-anchor="middle" letter-spacing="1.2" fill-opacity="1">PHOTO</text>
+      <text x="240" y="707" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" fill="#1C1C1E" text-anchor="middle" letter-spacing="1.2" fill-opacity=".8">PORTRAIT</text>
+      <circle cx="201" cy="733" r="4" fill="#1F8766" opacity="0"></circle>
+      <circle cx="201" cy="772" r="33" fill="none" stroke="#1F8766" stroke-width="3.5"></circle>
+      <circle cx="201" cy="772" r="27" fill="#FFFFFF" stroke="rgba(0,0,0,.06)"></circle>
+      <g clip-path="url(#th3)"><g transform="translate(44 750) scale(0.1095)"><g transform="translate(0 -114)">
+      <rect width="402" height="536" fill="#E6DED6"/>
+      <rect x="250" y="0" width="152" height="330" fill="#D8CEC6"/>
+      <path d="M262 0V330M300 0V330M338 0V330" stroke="#CFC4BB" stroke-width="3"/>
+      <rect x="0" y="330" width="402" height="206" fill="#CFCBD8"/>
+      <g fill="#A9B3CC" opacity=".55"><circle cx="40" cy="360" r="5"/><circle cx="96" cy="350" r="3"/><circle cx="330" cy="372" r="6"/><circle cx="372" cy="352" r="3"/><circle cx="60" cy="500" r="6"/><circle cx="352" cy="492" r="5"/><circle cx="296" cy="520" r="3"/></g>
+      <ellipse cx="190" cy="430" rx="132" ry="54" fill="#D6C7BF"/>
+      <ellipse cx="190" cy="418" rx="104" ry="36" fill="#E6D9D1"/>
+      <path d="M86 418 q20 -26 50 -30 M294 418 q-20 -26 -50 -30" stroke="#CDBDB4" stroke-width="5" fill="none" stroke-linecap="round"/>
+      <ellipse cx="190" cy="372" rx="66" ry="58" fill="#1C1C21"/>
+      <path d="M128 360 q-6 -30 16 -50 M252 360 q6 -30 -16 -50" stroke="#34343C" stroke-width="4" fill="none" stroke-linecap="round"/>
+      <path d="M158 396 Q190 350 222 396 Q206 414 190 414 Q174 414 158 396 Z" fill="#F5F2EC"/>
+      <ellipse cx="168" cy="420" rx="12" ry="7" fill="#F5F2EC"/>
+      <ellipse cx="212" cy="420" rx="12" ry="7" fill="#F5F2EC"/>
+      <ellipse cx="190" cy="304" rx="46" ry="41" fill="#1C1C21"/>
+      <ellipse cx="146" cy="326" rx="17" ry="44" fill="#1C1C21" transform="rotate(14 146 326)"/>
+      <ellipse cx="234" cy="326" rx="17" ry="44" fill="#1C1C21" transform="rotate(-14 234 326)"/>
+      <path d="M140 296 q-4 30 4 58 M240 296 q4 30 -4 58" stroke="#34343C" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <path d="M184 268 Q190 262 196 268 L203 312 Q190 322 177 312 Z" fill="#F5F2EC"/>
+      <ellipse cx="190" cy="322" rx="22" ry="15" fill="#F5F2EC"/>
+      <ellipse cx="190" cy="328" rx="15" ry="8" fill="#EFE6D6"/>
+      <ellipse cx="175" cy="324" rx="6" ry="3.5" fill="#F2A9B4" opacity=".6"/>
+      <ellipse cx="205" cy="324" rx="6" ry="3.5" fill="#F2A9B4" opacity=".6"/>
+      <ellipse cx="190" cy="314" rx="4.5" ry="3.2" fill="#E8A2A9"/>
+      <path d="M190 317 v4 m0 0 q-4 4 -8 2 m8 -2 q4 4 8 2" stroke="#B9868A" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+      <circle cx="167" cy="298" r="7.5" fill="#14213F" stroke="#2A3550" stroke-width="1.2"/>
+      <circle cx="213" cy="298" r="7.5" fill="#14213F" stroke="#2A3550" stroke-width="1.2"/>
+      <circle cx="164.5" cy="295.5" r="2.3" fill="#FFFFFF"/>
+      <circle cx="210.5" cy="295.5" r="2.3" fill="#FFFFFF"/>
+      <circle cx="169.5" cy="300.8" r="1" fill="#FFFFFF" opacity=".85"/>
+      <circle cx="215.5" cy="300.8" r="1" fill="#FFFFFF" opacity=".85"/>
+      <g stroke="#E6E2DA" stroke-width="1" stroke-linecap="round" opacity=".75" fill="none">
+        <path d="M172 320 q-30 -6 -54 -2"/><path d="M172 324 q-28 2 -50 10"/><path d="M208 320 q30 -6 54 -2"/><path d="M208 324 q28 2 50 10"/>
+      </g>
+      <rect x="116" y="250" width="148" height="182" rx="14" fill="none" stroke="#FFFFFF" stroke-opacity=".9" stroke-width="1.5"/></g></g></g>
+      <rect x="44" y="750" width="44" height="44" rx="9" fill="none" stroke="#1F8766" stroke-opacity=".7"></rect>
+      <circle cx="358" cy="772" r="22" fill="#e4f1ed" stroke="rgba(255,255,255,.95)"></circle><g transform="translate(358 772)"><path d="M-7 -1 A7 7 0 0 1 5 -5" fill="none" stroke="#1C1C1E" stroke-width="1.8" stroke-linecap="round"></path><path d="M5 -9 L6 -4.5 L1.5 -3.5" fill="none" stroke="#1C1C1E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path><path d="M7 1 A7 7 0 0 1 -5 5" fill="none" stroke="#1C1C1E" stroke-width="1.8" stroke-linecap="round"></path><path d="M-5 9 L-6 4.5 L-1.5 3.5" fill="none" stroke="#1C1C1E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></g>
+      <rect x="140" y="11" width="122" height="36" rx="18" fill="#000000"></rect>
+      <rect x="134" y="859" width="134" height="5" rx="2.5" fill="#000000" fill-opacity=".85"></rect></g></g>
+    </svg></g>
+<g transform="translate(1060 70) rotate(0 140 292.962962962963)"><svg x="0" y="0" width="280" height="585.925925925926" viewBox="0 0 432 904" xmlns="http://www.w3.org/2000/svg" role="presentation">
+      <defs><clipPath id="screen2"><rect x="15" y="15" width="402" height="874" rx="56"></rect></clipPath><clipPath id="vf2"><rect x="0" y="114" width="402" height="536"></rect></clipPath><clipPath id="th2"><rect x="44" y="750" width="44" height="44" rx="9"></rect></clipPath></defs>
+      <rect x="1" y="1" width="430" height="902" rx="70" fill="#3A3A3C"></rect>
+      <rect x="4" y="4" width="424" height="896" rx="67" fill="#121214"></rect>
+      <rect x="-1" y="190" width="3" height="34" rx="1.5" fill="#3A3A3C"></rect><rect x="-1" y="248" width="3" height="60" rx="1.5" fill="#3A3A3C"></rect><rect x="-1" y="320" width="3" height="60" rx="1.5" fill="#3A3A3C"></rect><rect x="430" y="260" width="3" height="92" rx="1.5" fill="#3A3A3C"></rect>
+      <g clip-path="url(#screen2)"><g transform="translate(15 15)">
+      <rect width="402" height="874" fill="#f6e7de"></rect>
+      <g clip-path="url(#vf2)"><g transform="translate(0 114)">
+      <rect width="402" height="536" fill="#D9CDBF"></rect>
+      <rect x="258" y="34" width="116" height="190" rx="4" fill="#F1ECE4" stroke="#C9BBAA" stroke-width="7"></rect>
+      <path d="M316 34V224M258 129H374" stroke="#C9BBAA" stroke-width="5"></path>
+      <rect x="0" y="424" width="402" height="112" fill="#CDBFAF"></rect>
+      <g fill="#6F8D69"><ellipse cx="52" cy="330" rx="15" ry="44" transform="rotate(-22 52 330)"></ellipse><ellipse cx="74" cy="322" rx="15" ry="46" transform="rotate(18 74 322)"></ellipse><ellipse cx="62" cy="300" rx="13" ry="40"></ellipse></g>
+      <rect x="34" y="364" width="58" height="66" rx="8" fill="#B07E55"></rect>
+      <ellipse cx="201" cy="242" rx="70" ry="76" fill="#21160F"></ellipse>
+      <circle cx="201" cy="166" r="30" fill="#21160F"></circle>
+      <path d="M51 536 Q61 360 201 354 Q341 360 351 536 Z" fill="#3E6A6C"></path>
+      <rect x="181" y="302" width="40" height="56" rx="14" fill="#714a31"></rect>
+      <ellipse cx="149" cy="262" rx="9" ry="14" fill="#714a31"></ellipse>
+      <ellipse cx="253" cy="262" rx="9" ry="14" fill="#714a31"></ellipse>
+      <circle cx="149" cy="284" r="9" fill="none" stroke="#D9B45A" stroke-width="3"></circle><circle cx="253" cy="284" r="9" fill="none" stroke="#D9B45A" stroke-width="3"></circle>
+      <ellipse cx="201" cy="258" rx="50" ry="62" fill="#8A5A3C"></ellipse>
+      
+      <path d="M171 233 q12 -6 22 0 M209 233 q10 -6 22 0" stroke="#1a120c" stroke-width="3.5" fill="none" stroke-linecap="round"></path>
+      <ellipse cx="182" cy="246" rx="5.5" ry="4" fill="#1D1411"></ellipse>
+      <ellipse cx="220" cy="246" rx="5.5" ry="4" fill="#1D1411"></ellipse>
+      <path d="M198 256 q3 12 -2 16" stroke="#714a31" stroke-width="3" fill="none" stroke-linecap="round"></path>
+      <path d="M186 280 q15 11 30 0" stroke="#794234" stroke-width="4" fill="none" stroke-linecap="round"></path>
+      <rect x="143" y="186" width="116" height="144" fill="none" stroke="#FFFFFF" stroke-opacity=".9" stroke-width="1.5"></rect>
+      <line x1="178" y1="246" x2="224" y2="246" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"></line>
+      <line x1="0" y1="178.7" x2="402" y2="178.7" stroke="#FFCCAB" stroke-opacity=".8" stroke-width="1.5" stroke-dasharray="7 6"></line><rect x="76.5" y="12" width="249" height="34" rx="17" fill="#6a5b51" fill-opacity=".86"></rect><text x="201" y="34" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="500" fill="#FFFFFF" text-anchor="middle">Tilt the camera down a little.</text></g></g>
+      
+      <rect x="77" y="602" width="248" height="36" rx="18" fill="#655a53" fill-opacity=".78" stroke="rgba(255,255,255,.18)"></rect>
+      <text x="98" y="625" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF" text-anchor="middle">0.5</text><text x="139" y="625" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF" text-anchor="middle">1</text><rect x="159" y="606" width="42" height="28" rx="14" fill="#FFCCAB" fill-opacity=".72"></rect><text x="180" y="625" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF" text-anchor="middle">1.2×</text><text x="221" y="625" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF" text-anchor="middle">2</text><text x="262" y="625" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF" text-anchor="middle">4</text><text x="303" y="625" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF" text-anchor="middle">8</text>
+      
+      <circle cx="38" cy="88" r="19" fill="#f8ede6" stroke="rgba(255,255,255,.95)"></circle><g transform="translate(38 88)"><path d="M-2 -9 L-7 1 H-1 L-3 9 L6 -2 H0 L2 -9 Z" fill="none" stroke="#1C1C1E" stroke-width="1.8" stroke-linejoin="round"></path><path d="M-8 -8 L8 8" stroke="#1C1C1E" stroke-width="1.8" stroke-linecap="round"></path></g>
+      <rect x="126" y="71" width="150" height="34" rx="17" fill="#f8ede6" stroke="rgba(255,255,255,.95)"></rect>
+      <g transform="translate(148 88)"><circle r="7" fill="none" stroke="#1C1C1E" stroke-width="1.6"></circle><circle cx="-2.4" cy="-1.6" r="1" fill="#1C1C1E"></circle><circle cx="2.4" cy="-1.6" r="1" fill="#1C1C1E"></circle><path d="M-3.2 1.8 Q0 4.6 3.2 1.8" fill="none" stroke="#1C1C1E" stroke-width="1.4" stroke-linecap="round"></path></g>
+      <text x="164" y="93" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#1C1C1E" text-anchor="start">RAW · 48 MP</text>
+      
+      <path d="M252 86 l4 4 l4 -4" fill="none" stroke="#1C1C1E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+      <circle cx="364" cy="88" r="19" fill="#f8ede6" stroke="rgba(255,255,255,.95)"></circle><g transform="translate(364 88)"><path d="M-9 -5 H9 M-9 0 H9 M-9 5 H9" stroke="#1C1C1E" stroke-width="1.8" stroke-linecap="round"></path><circle cx="-3" cy="-5" r="2.4" fill="#1C1C1E"></circle><circle cx="4" cy="0" r="2.4" fill="#1C1C1E"></circle><circle cx="-1" cy="5" r="2.4" fill="#1C1C1E"></circle></g>
+      <rect x="121" y="686" width="160" height="32" rx="16" fill="#f8ede6" stroke="rgba(255,255,255,.95)"></rect>
+      <rect x="124" y="689" width="70" height="26" rx="13" fill="#1C1C1E" fill-opacity=".08"></rect>
+      <text x="159" y="707" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" fill="#C7662E" text-anchor="middle" letter-spacing="1.2" fill-opacity="1">PHOTO</text>
+      <text x="240" y="707" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" fill="#1C1C1E" text-anchor="middle" letter-spacing="1.2" fill-opacity=".8">PORTRAIT</text>
+      <circle cx="201" cy="733" r="4" fill="#C7662E" opacity="0"></circle>
+      <circle cx="201" cy="772" r="33" fill="none" stroke="#C7662E" stroke-width="3.5"></circle>
+      <circle cx="201" cy="772" r="27" fill="#FFFFFF" stroke="rgba(0,0,0,.06)"></circle>
+      <g clip-path="url(#th2)"><g transform="translate(44 750) scale(0.1095)"><g transform="translate(0 -114)">
+      <rect width="402" height="536" fill="#D9CDBF"></rect>
+      <rect x="258" y="34" width="116" height="190" rx="4" fill="#F1ECE4" stroke="#C9BBAA" stroke-width="7"></rect>
+      <path d="M316 34V224M258 129H374" stroke="#C9BBAA" stroke-width="5"></path>
+      <rect x="0" y="424" width="402" height="112" fill="#CDBFAF"></rect>
+      <g fill="#6F8D69"><ellipse cx="52" cy="330" rx="15" ry="44" transform="rotate(-22 52 330)"></ellipse><ellipse cx="74" cy="322" rx="15" ry="46" transform="rotate(18 74 322)"></ellipse><ellipse cx="62" cy="300" rx="13" ry="40"></ellipse></g>
+      <rect x="34" y="364" width="58" height="66" rx="8" fill="#B07E55"></rect>
+      <ellipse cx="201" cy="192" rx="70" ry="76" fill="#21160F"></ellipse>
+      <circle cx="201" cy="116" r="30" fill="#21160F"></circle>
+      <path d="M51 536 Q61 310 201 304 Q341 310 351 536 Z" fill="#3E6A6C"></path>
+      <rect x="181" y="252" width="40" height="56" rx="14" fill="#714a31"></rect>
+      <ellipse cx="149" cy="212" rx="9" ry="14" fill="#714a31"></ellipse>
+      <ellipse cx="253" cy="212" rx="9" ry="14" fill="#714a31"></ellipse>
+      <circle cx="149" cy="234" r="9" fill="none" stroke="#D9B45A" stroke-width="3"></circle><circle cx="253" cy="234" r="9" fill="none" stroke="#D9B45A" stroke-width="3"></circle>
+      <ellipse cx="201" cy="208" rx="50" ry="62" fill="#8A5A3C"></ellipse>
+      
+      <path d="M171 183 q12 -6 22 0 M209 183 q10 -6 22 0" stroke="#1a120c" stroke-width="3.5" fill="none" stroke-linecap="round"></path>
+      <ellipse cx="182" cy="196" rx="5.5" ry="4" fill="#1D1411"></ellipse>
+      <ellipse cx="220" cy="196" rx="5.5" ry="4" fill="#1D1411"></ellipse>
+      <path d="M198 206 q3 12 -2 16" stroke="#714a31" stroke-width="3" fill="none" stroke-linecap="round"></path>
+      <path d="M186 230 q15 11 30 0" stroke="#794234" stroke-width="4" fill="none" stroke-linecap="round"></path>
+      
+      
+      </g></g></g>
+      <rect x="44" y="750" width="44" height="44" rx="9" fill="none" stroke="#C7662E" stroke-opacity=".7"></rect>
+      <circle cx="358" cy="772" r="22" fill="#f8ede6" stroke="rgba(255,255,255,.95)"></circle><g transform="translate(358 772)"><path d="M-7 -1 A7 7 0 0 1 5 -5" fill="none" stroke="#1C1C1E" stroke-width="1.8" stroke-linecap="round"></path><path d="M5 -9 L6 -4.5 L1.5 -3.5" fill="none" stroke="#1C1C1E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path><path d="M7 1 A7 7 0 0 1 -5 5" fill="none" stroke="#1C1C1E" stroke-width="1.8" stroke-linecap="round"></path><path d="M-5 9 L-6 4.5 L-1.5 3.5" fill="none" stroke="#1C1C1E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></g>
+      <rect x="140" y="11" width="122" height="36" rx="18" fill="#000000"></rect>
+      <rect x="134" y="859" width="134" height="5" rx="2.5" fill="#000000" fill-opacity=".85"></rect></g></g>
+    </svg></g>
+</svg>

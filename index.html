@@ -1,0 +1,751 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ars Imaginis</title>
+<meta name="description" content="Ars Imaginis is an iPhone camera that coaches you, live, to take better and more flattering photos of the people you love.">
+<link rel="icon" href="favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="32x32" href="media/ars-imaginis-icon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="media/ars-imaginis-icon-16.png">
+<link rel="apple-touch-icon" href="media/apple-touch-icon.png">
+<style>
+:root {
+  --bg: #F6EDE6; --surface: #FFFFFF; --surface-2: #EFE3D9; --ink: #0B2E30; --ink-soft: #2F4A4B; --muted: #5E6F6E;
+  --accent: #12474A; --accent-hover: #0B2E30; --on-accent: #FFFFFF; --peach: #F2B8A2; --peach-ink: #8A4A33;
+  --line: #E2D3C6; --focus: #12474A; --note-bg: #FBF4EE;
+  --shadow: 0 1px 2px rgba(11, 46, 48, .05), 0 8px 24px rgba(11, 46, 48, .07);
+  --display: Georgia, "Times New Roman", serif;
+  --body: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0B2E30; --surface: #12393B; --surface-2: #174345; --ink: #F6EDE6; --ink-soft: #DCCFC5; --muted: #A9BDBA;
+    --accent: #F2B8A2; --accent-hover: #F7CDBD; --on-accent: #0B2E30; --peach: #F2B8A2; --peach-ink: #F2B8A2;
+    --line: #24504F; --focus: #F2B8A2; --note-bg: #10393B;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 8px 24px rgba(0, 0, 0, .25);
+    color-scheme: dark;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 16px; line-height: 1.6; }
+a { color: var(--accent); }
+a:hover { color: var(--accent-hover); }
+button { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+.wrap { max-width: 1180px; margin: 0 auto; padding: 0 16px; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+.top { border-bottom: 1px solid var(--line); background: var(--surface); }
+.top .wrap { display: flex; align-items: center; gap: 14px; min-height: 64px; flex-wrap: wrap; }
+.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); }
+.brand img { width: 34px; height: 34px; }
+.wordmark { font-family: var(--display); font-weight: 400; font-size: 26px; line-height: 1; letter-spacing: .01em; word-spacing: .06em; }
+.badge { font-size: 12px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); border: 1px solid var(--line); border-radius: 999px; padding: 3px 10px; }
+.spacer { flex: 1; }
+.by { font-size: 13px; color: var(--muted); }
+
+.hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 32px; align-items: center; padding: 36px 0 12px; }
+.hero h1 { font-family: var(--display); font-weight: 400; font-size: clamp(32px, 4.6vw, 48px); line-height: 1.14; letter-spacing: .01em; word-spacing: .06em; margin: 0 0 14px; }
+.hero p { margin: 0 0 12px; color: var(--ink-soft); max-width: 560px; }
+.cta { display: flex; gap: 10px; flex-wrap: wrap; margin: 18px 0 8px; }
+.button { display: inline-flex; align-items: center; gap: 8px; border-radius: 999px; padding: 11px 20px; font-weight: 600; text-decoration: none; border: 1px solid var(--accent); }
+.button.primary { background: var(--accent); color: var(--on-accent); }
+.button.primary:hover { background: var(--accent-hover); color: var(--on-accent); }
+.button.secondary { color: var(--accent); background: transparent; }
+.note { display: inline-block; font-size: 13px; color: var(--muted); background: var(--note-bg); border: 1px solid var(--line); border-radius: 10px; padding: 6px 10px; }
+.hero-phones { display: flex; justify-content: center; align-items: flex-end; gap: 0; }
+.hero-phones .phone { width: 34%; max-width: 230px; filter: drop-shadow(0 18px 30px rgba(11, 46, 48, .22)); }
+.hero-phones .phone:nth-child(1) { transform: translateX(14%) rotate(-6deg) scale(.92); }
+.hero-phones .phone:nth-child(2) { position: relative; z-index: 2; }
+.hero-phones .phone:nth-child(3) { transform: translateX(-14%) rotate(6deg) scale(.92); }
+
+.tabs { display: flex; gap: 4px; margin: 26px 0 0; border-bottom: 1px solid var(--line); overflow-x: auto; scrollbar-width: none; }
+.tabs::-webkit-scrollbar { display: none; }
+.tab { appearance: none; background: none; border: 0; border-bottom: 2px solid transparent; padding: 10px 14px; cursor: pointer; color: var(--muted); white-space: nowrap; font-size: 15px; }
+.tab:hover { color: var(--ink); }
+.tab[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--accent); font-weight: 600; }
+.panel { padding: 28px 0 48px; }
+.panel[hidden] { display: none; }
+h2 { font-family: var(--display); font-weight: 400; font-size: 28px; line-height: 1.2; margin: 0 0 12px; letter-spacing: .01em; word-spacing: .06em; }
+h3 { font-size: 18px; margin: 0 0 6px; }
+.lead { color: var(--ink-soft); max-width: 760px; }
+.prose { max-width: 780px; }
+.prose p { margin: 0 0 14px; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 20px; box-shadow: var(--shadow); }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 16px; }
+.grid .card p { margin: 0; color: var(--ink-soft); font-size: 15px; }
+.kicker { font-size: 12px; text-transform: uppercase; letter-spacing: .08em; color: var(--peach-ink); font-weight: 700; margin: 0 0 6px; }
+.split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 28px; align-items: start; }
+table.glance { border-collapse: collapse; width: 100%; font-size: 15px; }
+table.glance th, table.glance td { text-align: left; padding: 9px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+table.glance th { width: 34%; color: var(--muted); font-weight: 600; }
+section.block { margin: 0 0 36px; }
+
+.studio { display: grid; grid-template-columns: minmax(260px, 380px) minmax(0, 1fr); gap: 32px; align-items: start; }
+.studio .phone { width: 100%; filter: drop-shadow(0 18px 30px rgba(11, 46, 48, .2)); }
+.controls h3 { margin-top: 18px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { appearance: none; border: 1px solid var(--line); background: var(--surface); border-radius: 999px; padding: 8px 14px; cursor: pointer; font-size: 14px; }
+.chip[aria-pressed="true"] { border-color: var(--accent); background: var(--accent); color: var(--on-accent); }
+.swatch { appearance: none; border: 2px solid transparent; background: none; cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: 4px; font-size: 12px; color: var(--muted); padding: 4px; border-radius: 12px; }
+.swatch span.dot { width: 30px; height: 30px; border-radius: 50%; display: block; border: 1px solid rgba(0, 0, 0, .12); }
+.swatch[aria-pressed="true"] { border-color: var(--accent); color: var(--ink); }
+.caption { margin-top: 14px; color: var(--ink-soft); }
+.caption h3 { font-size: 20px; }
+
+.icon-group { margin: 0 0 28px; }
+.icon-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(112px, 1fr)); gap: 14px; }
+.icon-grid figure { margin: 0; text-align: center; font-size: 13px; color: var(--ink-soft); }
+.icon-grid img { width: 84px; height: 84px; display: block; margin: 0 auto 6px; filter: drop-shadow(0 4px 10px rgba(11, 46, 48, .18)); }
+.icon-hero { display: flex; gap: 22px; align-items: center; flex-wrap: wrap; margin-bottom: 24px; }
+.icon-hero img { width: 120px; height: 120px; filter: drop-shadow(0 8px 18px rgba(11, 46, 48, .25)); }
+
+.legal { max-width: 800px; }
+.legal h3 { font-size: 17px; margin: 22px 0 6px; }
+.legal p { margin: 0 0 10px; color: var(--ink-soft); }
+.legal .effective { color: var(--muted); font-size: 14px; }
+
+footer { border-top: 1px solid var(--line); padding: 22px 0 36px; color: var(--muted); font-size: 14px; }
+footer .wrap { display: flex; gap: 16px; flex-wrap: wrap; justify-content: space-between; }
+
+@media (max-width: 860px) {
+  .hero, .split, .studio { grid-template-columns: 1fr; }
+  .studio .phone { max-width: 340px; margin: 0 auto; display: block; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .phone svg { transition: opacity .2s ease; }
+}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#about" aria-label="Ars Imaginis"><img src="media/logo.svg" alt="" width="34" height="34"><span class="wordmark">Ars Imaginis</span></a>
+    <span class="badge">iPhone app</span>
+    <span class="spacer"></span>
+    <span class="by">By Alyssa I. Agard</span>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero" aria-labelledby="hero-title">
+    <div>
+      <h1 id="hero-title">Better photos of the people you love.</h1>
+      <p>Ars Imaginis is an iPhone camera that coaches you while you shoot. It reads the scene and tells you what to do, like "tilt down" or "pan left", so anyone can take a flattering photo of someone else.</p>
+      <p>It captures with Apple's full-quality photo pipeline and saves every original untouched.</p>
+      <div class="cta">
+        <a class="button primary" href="https://testflight.apple.com/join/1mFS1sYV">Try the beta on TestFlight</a>
+        <a class="button secondary" href="#screens">See the screens</a>
+      </div>
+      <p class="note">Public beta for iPhone with iOS 26 or later. Phone screens on this page are illustrations.</p>
+    </div>
+    <div class="hero-phones" id="heroPhones" aria-hidden="true"></div>
+  </section>
+
+  <nav class="tabs" role="tablist" aria-label="Showcase sections">
+    <button class="tab" role="tab" id="tab-about" aria-controls="panel-about" data-tab="about">About</button>
+    <button class="tab" role="tab" id="tab-screens" aria-controls="panel-screens" data-tab="screens">Screens</button>
+    <button class="tab" role="tab" id="tab-features" aria-controls="panel-features" data-tab="features">Features</button>
+    <button class="tab" role="tab" id="tab-icons" aria-controls="panel-icons" data-tab="icons">App icons</button>
+    <button class="tab" role="tab" id="tab-how" aria-controls="panel-how" data-tab="how">How it works</button>
+    <button class="tab" role="tab" id="tab-privacy" aria-controls="panel-privacy" data-tab="privacy">Privacy</button>
+    <button class="tab" role="tab" id="tab-terms" aria-controls="panel-terms" data-tab="terms">Terms</button>
+  </nav>
+
+  <section class="panel" role="tabpanel" id="panel-about" aria-labelledby="tab-about">
+    <div class="split">
+      <div class="prose">
+        <section class="block">
+          <h2>Why I built it</h2>
+          <p>Have you ever looked forward to having your picture taken? Maybe it was a night out, a celebration, or just a day you felt great and wanted to remember it.</p>
+          <p>You hand your phone to a friend, they take the picture, and you barely recognize the person on the screen. The angle is off, the light is harsh, the lens stretches your face, and your hands are cut off at the edge. The moment you wanted to keep isn't the one you got.</p>
+          <p>It happens to almost everyone, and it isn't your friend's fault. Taking a good photo of someone is a skill, and most of us were never taught it.</p>
+          <p>That's why I built Ars Imaginis. It sits with whoever is holding the camera and does what a good photographer would: it notices what's off, says how to fix it in plain words, and lets them know when the shot is right. So the next time you feel great, your photos can show it.</p>
+        </section>
+        <section class="block">
+          <h2>What it does</h2>
+          <p>Point the camera at someone and Ars Imaginis watches the framing with you. It finds faces and bodies, checks where the eyes sit, notices when a hand or knee is cut off at the edge, and reads the light on the face. Then it gives one clear instruction at a time, and tells you when it all looks great.</p>
+          <p>Underneath the coaching is a serious camera: the full-quality Apple photo pipeline, every lens, RAW and 48 MP capture, manual controls, a Portrait mode with adjustable blur, and color looks with guidance for different skin undertones. The original photo is always saved exactly as the camera captured it.</p>
+          <p>The name is Latin for "the art of the image."</p>
+        </section>
+      </div>
+      <div>
+        <section class="block card">
+          <h3>At a glance</h3>
+          <table class="glance">
+            <tr><th scope="row">Platform</th><td>iPhone, iOS 26 or later</td></tr>
+            <tr><th scope="row">Status</th><td>Public beta on TestFlight</td></tr>
+            <tr><th scope="row">Built</th><td>October 2026</td></tr>
+            <tr><th scope="row">Language and interface</th><td>Swift and SwiftUI, with Liquid Glass</td></tr>
+            <tr><th scope="row">Camera</th><td>AVFoundation, full-quality capture, LiDAR depth</td></tr>
+            <tr><th scope="row">On-device intelligence</th><td>Apple Vision for faces, bodies, and animals; Core Motion for level and steadiness</td></tr>
+            <tr><th scope="row">Imaging</th><td>Core Image for looks and depth blur, always on a separate copy</td></tr>
+            <tr><th scope="row">Privacy</th><td>Collects nothing; no network connection</td></tr>
+          </table>
+        </section>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel" role="tabpanel" id="panel-screens" aria-labelledby="tab-screens" hidden>
+    <h2>Look around the app</h2>
+    <p class="lead">Choose a screen, then try any of the six themes in light or dark. These are illustrations of the real layout on an iPhone 17 Pro.</p>
+    <div class="studio">
+      <div class="phone" id="studioPhone" role="img" aria-label="Illustrated iPhone showing the app"></div>
+      <div class="controls">
+        <h3>Screen</h3>
+        <div class="chips" id="screenChips"></div>
+        <h3>Theme</h3>
+        <div class="chips" id="themeChips"></div>
+        <h3>Appearance</h3>
+        <div class="chips" id="modeChips"></div>
+        <div class="caption" id="screenCaption" aria-live="polite"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel" role="tabpanel" id="panel-features" aria-labelledby="tab-features" hidden>
+    <h2>Features</h2>
+    <p class="lead">Everything is designed around one goal: helping someone who isn't a confident photographer take a great photo of another person.</p>
+    <div class="grid" id="featureGrid"></div>
+  </section>
+
+  <section class="panel" role="tabpanel" id="panel-icons" aria-labelledby="tab-icons" hidden>
+    <h2>App icons</h2>
+    <div class="icon-hero">
+      <img src="media/icons/AppIcon.png" alt="The default Ars Imaginis icon: a glass camera lens with a cream barrel on a peach field" width="120" height="120">
+      <p class="lead">The default icon is a glass lens in teal, peach, and cream. It has a dark version for dark home screens and a tinted version that iOS colors itself. A picker in Settings lets anyone switch to any of the alternates below.</p>
+    </div>
+    <div id="iconGroups"></div>
+  </section>
+
+  <section class="panel" role="tabpanel" id="panel-how" aria-labelledby="tab-how" hidden>
+    <h2>How it works</h2>
+    <p class="lead">A tour of the technical design, for the curious. The source code is private.</p>
+    <div class="grid" id="howGrid"></div>
+  </section>
+
+  <section class="panel legal" role="tabpanel" id="panel-privacy" aria-labelledby="tab-privacy" hidden>
+    <h2>Ars Imaginis Privacy Policy</h2>
+    <p class="effective">Effective October 19, 2026</p>
+    <p>This Privacy Policy explains how Ars Imaginis (“the app”) handles information. The app is made and offered by Alyssa I. Agard, an individual developer in New Jersey, United States (“the developer”).</p>
+    <p>In short: the app does not collect, store, sell, or share your personal information. It has no accounts, analytics, advertising, or tracking, and it does not connect to the internet. Everything it does with your camera, photos, and sensors happens on your iPhone.</p>
+    <h3>Who is responsible</h3>
+    <p>The developer is responsible for this policy and, under European and United Kingdom law, is the controller of the limited information described in “Information the developer may receive.” You can reach the developer at <a href="mailto:appstore@alyssaagard.dev">appstore@alyssaagard.dev</a>.</p>
+    <h3>Information the app does not collect</h3>
+    <p>The app does not collect or send your name, contact details, location, device identifiers, usage data, diagnostics, photos, camera images, face data, or any other personal information. It contains no third-party code for analytics, advertising, or crash reporting, and it never connects to the internet.</p>
+    <h3>Camera and on-device analysis</h3>
+    <p>The app uses the camera to show the viewfinder and to take photos.</p>
+    <p>To give framing and lighting guidance, the app analyzes the live camera image on your iPhone with Apple’s Vision framework. Depending on the subject you choose, it looks for the positions of faces and bodies, or of animals, and for the brightness of the scene. Each analysis happens in memory, is discarded within a fraction of a second, and is never saved or sent anywhere.</p>
+    <h3>Biometric information</h3>
+    <p>The app locates faces and features such as the eyes in the live image only to give framing advice. It does not create a face template, faceprint, or any measurement used to identify or recognize a person, and it does not store any face data. Nothing leaves your device, and the developer never receives or has access to any face data.</p>
+    <p>Because the app does not collect biometric identifiers as defined by laws such as the Illinois Biometric Information Privacy Act, the Texas Capture or Use of Biometric Identifier Act, Washington’s biometric privacy law, and the Colorado Privacy Act, it keeps no biometric data and no retention schedule for it. If that ever changes, this policy will be updated and your consent will be asked first.</p>
+    <h3>Motion sensors</h3>
+    <p>The app reads your iPhone’s motion sensors to show the level indicator and to tell when the camera is steady. These readings are used only on your device and are not saved.</p>
+    <h3>Photo library</h3>
+    <p>The app asks for permission to add photos to your photo library. This permission only lets the app add new photos. The app cannot see, read, or change anything already in your library.</p>
+    <p>Photos are saved exactly as your iPhone’s camera system produces them. Each photo includes the standard camera information that iOS stores in it, such as the device model, lens, exposure settings, and the date and time. If you use Portrait or turn on Save depth, depth information is stored inside the photo so it can be used for portrait editing. If you use Portrait or turn on Save a styled copy, a second photo with the background blurred or your chosen look is saved as well. The app does not add location information to photos.</p>
+    <h3>Temporary in-app gallery</h3>
+    <p>So you can review your shots, the app keeps copies of the photos you take during the current session in its private temporary storage on your iPhone. Only the app can reach this storage. The copies are deleted when the app closes or the next time you open it, and iOS may also clear them at any time.</p>
+    <p>If you have not allowed photo library access, your photos exist only in this temporary storage and are lost when the app closes. If you allow access while the app is still open, the photos still in the gallery are saved to your library automatically.</p>
+    <h3>Preferences stored on your device</h3>
+    <p>The app remembers your preferences on your iPhone, such as your color theme, appearance, lens choices, look settings, camera settings when Remember Settings is on, whether you have seen the welcome screens, and which version of the Terms of Use and this policy you agreed to. These stay on your device and are removed when you delete the app.</p>
+    <h3>Information the developer may receive</h3>
+    <p>Email. If you write to the developer, the developer receives your email address and whatever you include in your message. It is used only to reply to you and is kept only as long as needed for that, and no longer than two years after the conversation ends unless the law requires otherwise.</p>
+    <p>TestFlight. If you test the app through Apple’s TestFlight, Apple may share with the developer the name and email address you were invited with, your device model and iOS version, crash reports, and any feedback or screenshots you choose to send. This is used only to test and improve the app and is handled under Apple’s terms.</p>
+    <p>App Store. If you choose in your iPhone’s settings to share analytics with app developers, Apple may share aggregated, de-identified usage and crash statistics. The developer cannot identify you from them.</p>
+    <h3>Selling, sharing, and advertising</h3>
+    <p>The developer does not sell personal information, does not share it for cross-context behavioral advertising, does not use it for targeted advertising or profiling, and does not make automated decisions about you. Information is disclosed only if the law requires it.</p>
+    <h3>Tracking, Do Not Track, and Global Privacy Control</h3>
+    <p>The app does not track you across apps or websites, so it never shows Apple’s App Tracking Transparency prompt. Because there is no tracking, there is nothing for Do Not Track or Global Privacy Control signals to turn off, and you are treated as having opted out of any sale or sharing.</p>
+    <h3>Children</h3>
+    <p>The app is not directed to children under 13, or under 16 where local law sets a higher age, and the developer does not knowingly collect personal information from children. If you believe a child has sent the developer personal information, write to <a href="mailto:appstore@alyssaagard.dev">appstore@alyssaagard.dev</a> and it will be deleted.</p>
+    <h3>Security</h3>
+    <p>Because the app keeps everything on your iPhone, your information is protected by iOS security, including your device passcode and encryption. The developer uses reasonable measures to protect the few emails and TestFlight records described above.</p>
+    <h3>Your privacy rights</h3>
+    <p>Wherever you live, you can ask the developer what personal information it holds about you, ask for a copy, ask for it to be corrected or deleted, and ask how it is used. Write to <a href="mailto:appstore@alyssaagard.dev">appstore@alyssaagard.dev</a>. The developer may ask you to confirm your request from the same email address, will answer within 30 days or sooner when the law requires, and will never treat you differently for using your rights.</p>
+    <h3>California residents</h3>
+    <p>Whether or not the California Consumer Privacy Act applies to the developer, California residents have the right to know, delete, and correct personal information, to opt out of its sale or sharing, to limit the use of sensitive personal information, and not to be discriminated against for using these rights.</p>
+    <p>In the past 12 months the developer has collected only identifiers (an email address, and for TestFlight testers a name), the contents of messages, and diagnostic data from Apple, and only from people who wrote to the developer or tested the app. None of it was sold or shared, and no sensitive personal information was collected. You may use an authorized agent to make a request.</p>
+    <p>Under California’s “Shine the Light” law, the developer does not disclose personal information to third parties for their direct marketing. This policy is also provided under the California Online Privacy Protection Act.</p>
+    <h3>Colorado, Virginia, Connecticut, and other U.S. states</h3>
+    <p>Residents of Colorado, Virginia, Connecticut, Utah, Texas, Oregon, Montana, and other states with consumer privacy laws have the rights to access, correct, delete, and get a portable copy of their personal data, and to opt out of targeted advertising, sale, and profiling. The developer does none of those last three.</p>
+    <p>If the developer declines your request, you may appeal by replying to the decision with the word “Appeal.” The developer will answer within 45 days. If you are not satisfied, you may contact your state’s Attorney General.</p>
+    <h3>European Economic Area, United Kingdom, and Switzerland</h3>
+    <p>The developer handles the limited information described above on these legal bases: legitimate interests in answering your messages and improving the app, and your consent when you choose to send feedback. You may withdraw consent at any time.</p>
+    <p>You have the rights to access, rectify, erase, restrict, and port your personal data, to object to its use, and to complain to your data protection authority, such as your national authority in the European Union, the Information Commissioner’s Office in the United Kingdom, or the Federal Data Protection and Information Commissioner in Switzerland.</p>
+    <p>The developer is in the United States, so messages you send are handled there. They are used only to answer you.</p>
+    <h3>Other countries</h3>
+    <p>If you live in Canada, Brazil, Australia, or another country with privacy laws, you have the rights those laws give you. Write to <a href="mailto:appstore@alyssaagard.dev">appstore@alyssaagard.dev</a> to use them.</p>
+    <h3>Changes to this policy</h3>
+    <p>If this policy changes, the updated version will be posted with a new effective date. If a change matters to how your information is handled, the app will ask you to review and agree again before you continue.</p>
+    <h3>Contact</h3>
+    <p>Questions or requests about privacy can be sent to <a href="mailto:appstore@alyssaagard.dev">appstore@alyssaagard.dev</a>.</p>
+    <p class="effective">© 2026 Alyssa I. Agard. All rights reserved.</p>
+  </section>
+
+  <section class="panel legal" role="tabpanel" id="panel-terms" aria-labelledby="tab-terms" hidden>
+    <h2>Ars Imaginis Terms of Use</h2>
+    <p class="effective">Effective October 19, 2026</p>
+    <p>These Terms of Use are an agreement between you and Alyssa I. Agard (“the developer”), an individual developer in New Jersey, United States, about your use of Ars Imaginis (“the app”). By tapping Agree and Continue, or by installing or using the app, you agree to these terms and to the Privacy Policy, which is part of them. If you do not agree, do not use the app.</p>
+    <h3>Who may use the app</h3>
+    <p>You must be at least 13 years old, or the age of digital consent where you live if that is higher. If you are under 18, you may use the app only with the permission of a parent or guardian, who agrees to these terms for you.</p>
+    <h3>Pre-release software</h3>
+    <p>The app is a personal project in pre-release testing. It may contain errors, change without notice, or stop working, and features may be added or removed at any time.</p>
+    <h3>License</h3>
+    <p>The developer grants you a personal, non-exclusive, non-transferable, revocable license to use the app on Apple devices that you own or control, for personal and non-commercial purposes, as permitted by Apple’s usage rules. You may not copy, modify, reverse engineer, redistribute, sell, or rent the app, except where the law allows it despite this restriction.</p>
+    <h3>Acceptable use</h3>
+    <p>You are responsible for how you use the app and for the photos you take with it. You agree to respect the privacy and rights of the people you photograph and to obtain any consent the law requires.</p>
+    <p>You agree not to use the app to photograph anyone in a place where they reasonably expect privacy, such as a bathroom or changing room, without their consent; to photograph minors without the consent of a parent or guardian where the law requires it; to harass, stalk, or intimidate anyone; to use auto-capture to photograph people secretly; or to break any law or rule that applies where you take photos.</p>
+    <h3>Your photos</h3>
+    <p>Your photos belong to you, and the developer never receives them. Saving depends on iOS and on the photo library permission you choose. Keep your own backups. The developer is not responsible for photos that are lost, not saved, or damaged.</p>
+    <h3>Guidance, looks, and portrait effects</h3>
+    <p>The app’s framing, lighting, and steadiness guidance, and its advice about looks for different skin undertones and light, are suggestions only. Styled copies and background blur are artistic approximations. The original photo is always saved separately, and you decide when and what to photograph.</p>
+    <h3>Intellectual property</h3>
+    <p>The app, its name Ars Imaginis, its design, its text, and its code belong to the developer and are protected by copyright and other laws. These terms do not give you any rights to them beyond the license above. Apple, iPhone, and other Apple marks belong to Apple Inc.</p>
+    <h3>Feedback</h3>
+    <p>If you send ideas or feedback, the developer may use them freely, without paying you or owing you anything.</p>
+    <h3>Apple and other services</h3>
+    <p>Your use of iOS, the Photos app, the App Store, and TestFlight is governed by Apple’s own terms. The developer is not responsible for those services. You must also follow the terms of any other service you use with the app, such as your wireless carrier’s.</p>
+    <h3>No warranty</h3>
+    <p>THE APP IS PROVIDED “AS IS” AND “AS AVAILABLE,” WITHOUT WARRANTIES OF ANY KIND, WHETHER EXPRESS, IMPLIED, OR STATUTORY, INCLUDING ANY WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, NON-INFRINGEMENT, ACCURACY, OR UNINTERRUPTED OR ERROR-FREE OPERATION. YOU USE THE APP AT YOUR OWN RISK.</p>
+    <h3>Limitation of liability</h3>
+    <p>TO THE FULLEST EXTENT PERMITTED BY LAW, THE DEVELOPER WILL NOT BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, EXEMPLARY, OR PUNITIVE DAMAGES, FOR ANY LOSS OF DATA, PHOTOS, PROFITS, OR GOODWILL, OR FOR DAMAGE TO ANY DEVICE, ARISING OUT OF OR RELATED TO THE APP OR THESE TERMS, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. IF THE DEVELOPER IS FOUND LIABLE DESPITE THIS SECTION, THE DEVELOPER’S TOTAL LIABILITY FOR ALL CLAIMS WILL NOT EXCEED THE AMOUNT YOU PAID FOR THE APP.</p>
+    <h3>Indemnity</h3>
+    <p>You agree to defend, indemnify, and hold harmless the developer from any claims, losses, damages, and expenses, including reasonable legal fees, that arise from your use of the app, the photos you take, or your violation of these terms or of anyone’s rights.</p>
+    <h3>New Jersey residents</h3>
+    <p>If you are a consumer who lives in New Jersey, the following parts of these terms do not apply to you, and do not limit any rights you may have, to the extent New Jersey law does not allow them: the disclaimer of warranties; the exclusion of indirect, incidental, special, consequential, exemplary, and punitive damages; the limitation of liability for loss of data or photos; the limitation of liability for negligence; the limit on the total amount of liability; and the indemnity.</p>
+    <h3>Consumers in the European Union, the United Kingdom, and other countries</h3>
+    <p>If you are a consumer who lives in the European Union, the United Kingdom, or another country with mandatory consumer protection laws, nothing in these terms limits or excludes liability for death or personal injury caused by negligence, for fraud, or for gross negligence or intentional misconduct, or any other liability that the law of the country where you live does not allow to be limited or excluded. You keep the protection of the mandatory laws of that country, and you may bring a claim in its courts.</p>
+    <h3>California residents</h3>
+    <p>Under California Civil Code Section 1789.3, California users are entitled to the following notice: the Complaint Assistance Unit of the Division of Consumer Services of the California Department of Consumer Affairs may be contacted in writing at 1625 North Market Blvd., Suite N 112, Sacramento, California 95834, or by telephone at (800) 952-5210.</p>
+    <h3>Resolving disputes</h3>
+    <p>If you have a problem with the app, please write to <a href="mailto:appstore@alyssaagard.dev">appstore@alyssaagard.dev</a> first. You and the developer agree to try in good faith to resolve any dispute informally for 60 days before starting a court case. Either of you may still bring an individual claim in small claims court.</p>
+    <h3>Governing law</h3>
+    <p>These terms are governed by the laws of the State of New Jersey and applicable United States federal law, without regard to conflict of law rules. Subject to the section for consumers in the European Union, the United Kingdom, and other countries, any dispute about the app or these terms will be decided in the state or federal courts located in New Jersey, and you and the developer agree to the jurisdiction of those courts.</p>
+    <h3>Apple</h3>
+    <p>These terms are between you and the developer only, not Apple. The developer, not Apple, is solely responsible for the app and its content.</p>
+    <p>Apple has no obligation to provide maintenance or support for the app. If the app fails to conform to any warranty that applies despite these terms, you may notify Apple, and Apple will refund the purchase price, if any. To the maximum extent permitted by law, Apple has no other warranty obligation for the app.</p>
+    <p>The developer, not Apple, is responsible for addressing any claims by you or a third party relating to the app, including product liability claims, claims that the app fails to meet a legal or regulatory requirement, claims under consumer protection, privacy, or similar laws, and claims that the app or your use of it infringes someone’s intellectual property rights.</p>
+    <p>You confirm that you are not located in a country subject to a U.S. government embargo or designated as supporting terrorism, and that you are not on any U.S. government list of prohibited or restricted parties.</p>
+    <p>Apple and its subsidiaries are third-party beneficiaries of these terms, and once you accept them, Apple may enforce them against you.</p>
+    <h3>Ending these terms</h3>
+    <p>You may stop using the app at any time by deleting it. The developer may end your license if you break these terms. The sections on your photos, intellectual property, feedback, no warranty, limitation of liability, indemnity, resolving disputes, governing law, and Apple continue to apply after your use ends.</p>
+    <h3>Changes to these terms</h3>
+    <p>The developer may update these terms. The updated version will be posted with a new effective date, and the app will ask you to agree again before you continue using it.</p>
+    <h3>General</h3>
+    <p>These terms and the Privacy Policy are the entire agreement between you and the developer about the app. If any part cannot be enforced, the rest stays in effect. If the developer does not enforce a part of these terms, that is not a waiver. You may not transfer these terms to anyone else; the developer may transfer them, for example to a business the developer forms to publish the app.</p>
+    <h3>Contact</h3>
+    <p>Questions, complaints, or claims about the app can be sent to Alyssa I. Agard at <a href="mailto:appstore@alyssaagard.dev">appstore@alyssaagard.dev</a>.</p>
+    <p class="effective">© 2026 Alyssa I. Agard. All rights reserved.</p>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Ars Imaginis. Designed and developed by Alyssa I. Agard. &copy; 2026 Alyssa I. Agard. All rights reserved.</span>
+    <span><a href="mailto:appstore@alyssaagard.dev">appstore@alyssaagard.dev</a></span>
+  </div>
+</footer>
+
+<script>
+(() => {
+  const ICONS = [{"group": "main", "id": "AppIcon", "label": "Glass lens"}, {"group": "main", "id": "AppIcon-Dark", "label": "Glass lens, dark"}, {"group": "main", "id": "AppIcon-Tinted", "label": "Glass lens, tinted"}, {"group": "Lenses", "id": "Lens-Teal", "label": "Teal"}, {"group": "Lenses", "id": "Lens-PeachField", "label": "Peach field"}, {"group": "Lenses", "id": "Lens-SandIris", "label": "Sand iris"}, {"group": "Lenses", "id": "Lens-DeepTeal", "label": "Deep teal"}, {"group": "Lenses", "id": "Lens-CreamBarrel", "label": "Cream barrel"}, {"group": "Lenses", "id": "Lens-PeachRing", "label": "Peach ring"}, {"group": "Lenses", "id": "Lens-RingedSand", "label": "Ringed sand"}, {"group": "Camera", "id": "Camera-Shutter", "label": "Shutter portrait"}, {"group": "Camera", "id": "Camera-AperturePortrait", "label": "Aperture portrait"}, {"group": "Camera", "id": "Camera-Portrait", "label": "Portrait camera"}, {"group": "Camera", "id": "Camera-FramedLens", "label": "Framed lens"}, {"group": "Camera", "id": "Camera-Aperture", "label": "Aperture"}, {"group": "Camera", "id": "Camera-Retro", "label": "Retro camera"}, {"group": "Camera", "id": "Camera-InstantPrint", "label": "Instant print"}, {"group": "Portrait arch", "id": "Arch-Classic", "label": "Classic"}, {"group": "Portrait arch", "id": "Arch-FocusBrackets", "label": "Focus brackets"}, {"group": "Portrait arch", "id": "Arch-Spotlight", "label": "Spotlight"}, {"group": "Portrait arch", "id": "Arch-Cameo", "label": "Cameo"}, {"group": "Portrait arch", "id": "Arch-PeachField", "label": "Peach field"}, {"group": "Portrait arch", "id": "Arch-DeepTeal", "label": "Deep teal"}, {"group": "Portrait arch", "id": "Arch-Spiral", "label": "Gallery spiral"}, {"group": "Golden spiral", "id": "Spiral-Bold", "label": "Bold"}, {"group": "Golden spiral", "id": "Spiral-Turned", "label": "Turned"}, {"group": "Golden spiral", "id": "Spiral-PeachField", "label": "Peach field"}, {"group": "Golden spiral", "id": "Spiral-CreamLine", "label": "Cream line"}, {"group": "Golden spiral", "id": "Spiral-LensRing", "label": "Lens ring"}, {"group": "Golden spiral", "id": "Spiral-DeepTeal", "label": "Deep teal"}, {"group": "Golden spiral", "id": "Spiral-LightSand", "label": "Light sand"}];
+
+  const THEMES = {
+    peach: { name: "Peach", pastel: "#FFCCAB", deep: "#C7662E" },
+    blush: { name: "Blush", pastel: "#FFC0D7", deep: "#CC4A80" },
+    lavender: { name: "Lavender", pastel: "#CCBAFF", deep: "#755CCC" },
+    mint: { name: "Mint", pastel: "#A8E8CF", deep: "#1F8766" },
+    sky: { name: "Sky", pastel: "#A8D4FF", deep: "#2673C7" },
+    pearl: { name: "Pearl", pastel: "#E6E6EB", deep: "#5C5C69" },
+  };
+
+  const SCREENS = {
+    coach: { name: "Coaching", title: "Live coaching", text: "Portrait guides outline the face, mark the eye line, and show the upper third, where eyes usually look best. One clear instruction appears at the top, and the line turns green when the eyes are right." },
+    great: { name: "Looks great", title: "Ready when you are", text: "When the framing is right, the app says so. A small dot above the shutter lights up when the phone is steady enough for a sharp photo." },
+    menu: { name: "Quick menu", title: "Everything in one pill", text: "Tap the pill at the top to switch subjects (people, animals, or still subjects), change format, resolution, and shape, and turn on Portrait, auto-capture, or the manual controls." },
+    portrait: { name: "Portrait", title: "Portrait with adjustable blur", text: "Portrait saves depth inside the original at full resolution and a second copy with the background blurred. The blur can also be changed later in the Photos app." },
+    animals: { name: "Animals", title: "Animals too", text: "Switch to Animals and the app finds the animal, boxes it, and helps you keep it centered, close enough, and fully in frame. Hank the rabbit is ready for his picture!" },
+    settings: { name: "Themes and icons", title: "Make it yours", text: "Six color themes, light or dark appearance, and a picker of alternate app icons. Peach is the default." },
+  };
+
+  const FEATURES = [
+    ["Coaching", "Live framing guidance", "Faces, eye line, headroom, cropping at joints, lens choice, side light, and backlight, turned into plain instructions like \"tilt down\" and \"move closer.\""],
+    ["Coaching", "People, animals, and still subjects", "People get the full coaching set. Animals mode keeps pets centered and in frame. Still Subjects turns coaching off for food, objects, and places."],
+    ["Coaching", "Steady dot and auto-capture", "A dot lights up when the phone is still enough for a sharp photo. Auto-capture takes the shot for you when everything is right."],
+    ["Quality", "Apple's full-quality pipeline", "Every photo goes through Apple's highest-quality processing, and the original is saved byte for byte, with the same metadata as the built-in Camera."],
+    ["Quality", "The whole photo in the viewfinder", "What you see is exactly what you get. 16:9 and 1:1 shade the viewfinder instead of cropping, so the original keeps its full frame."],
+    ["Quality", "RAW, HEIF, and JPEG at up to 48 MP", "Apple ProRAW, HEIF, HEIF with RAW, and JPEG, at 12, 24, or 48 MP. Zoom never invents pixels the sensor did not capture."],
+    ["Lenses", "Every lens, plus 28 and 35 mm", "Ultra wide, wide, and telephoto, with optional 28 mm and 35 mm framings and a choice of which lens the app opens at."],
+    ["Lenses", "Auto Macro", "Get close and the app switches to the ultra wide lens for macro focus, keeping the same framing, just like Apple's Camera."],
+    ["Creative", "Portrait mode", "Depth saved at full resolution with the LiDAR camera, plus a second copy with adjustable background blur."],
+    ["Creative", "Looks with skin-tone guidance", "Eight color looks, fine-tuning sliders, and advice organized by undertone and light. Looks always go on a separate copy."],
+    ["Control", "Tap, slide, and manual", "Tap to focus and slide to brighten or darken, like the built-in Camera. Manual exposure, shutter, ISO, white balance, and focus are one tap away."],
+    ["Control", "Courtesy flash", "A gentle flash of light after each photo lets the person you're photographing know the shot was taken."],
+    ["Yours", "Themes, dark mode, and icons", "Six themes, light or dark appearance, and alternate app icons. Settings are remembered, and one tap resets everything."],
+    ["Yours", "A private session gallery", "Review the photos from this session in the app. They're already saved to your library, and the app's copies disappear when it closes."],
+    ["Yours", "Guided from the first launch", "A welcome, the terms, and a short optional tour, plus a full user guide in Settings."],
+  ];
+
+  const HOW = [
+    ["Capture", "Apple's camera pipeline", "AVFoundation drives every lens at its highest-quality setting, with zero shutter lag and responsive capture, and never requests more pixels than the sensor provides."],
+    ["Capture", "Untouched originals", "Photos are saved through PhotoKit exactly as the camera produced them. Anything creative, like looks or blur, is rendered into a separate second photo."],
+    ["Depth", "Full-resolution depth", "Portrait uses the LiDAR camera only when it can keep the full 48 MP resolution and Apple's best processing. Otherwise depth is skipped rather than lowering quality."],
+    ["Coaching", "On-device vision", "Apple's Vision framework finds faces, eye positions, body joints, and animals about ten times a second. Results are smoothed over several frames so tips don't flicker."],
+    ["Coaching", "Motion sensing", "Core Motion powers the level and the steadiness signal that drives the steady dot and auto-capture."],
+    ["Imaging", "Looks and blur", "Core Image renders color looks and Apple's portrait blur from the saved depth, in 10-bit HEIF, on a background queue so the camera never waits."],
+    ["Interface", "SwiftUI and Liquid Glass", "A native SwiftUI interface with Liquid Glass controls, six themes in light and dark, and a layout modeled on Apple's Camera."],
+    ["Privacy", "Nothing leaves the phone", "No accounts, analytics, advertising, or network code. Session previews live in temporary storage that is cleared when the app closes."],
+  ];
+
+  const $ = (s, r = document) => r.querySelector(s);
+  const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+  function hex(c) { const n = parseInt(c.slice(1), 16); return [(n >> 16) & 255, (n >> 8) & 255, n & 255]; }
+  function mix(a, b, t) {
+    const x = hex(a), y = hex(b);
+    return "#" + x.map((v, i) => Math.round(v + (y[i] - v) * t).toString(16).padStart(2, "0")).join("");
+  }
+
+  let uid = 0;
+
+  // ---------- Viewfinder scenes (402 x 536) ----------
+  function person(o) {
+    const cx = o.cx || 201, ey = o.eyesY, fy = ey + 12;
+    const hair = o.hair, skin = o.skin, shade = mix(skin, "#000000", .18);
+    const shirt = o.shirt;
+    return `
+      <ellipse cx="${cx}" cy="${fy - 16}" rx="70" ry="76" fill="${hair}"/>
+      ${o.bun ? `<circle cx="${cx}" cy="${fy - 92}" r="30" fill="${hair}"/>` : ""}
+      <path d="M${cx - 150} 536 Q${cx - 140} ${fy + 102} ${cx} ${fy + 96} Q${cx + 140} ${fy + 102} ${cx + 150} 536 Z" fill="${shirt}"/>
+      <rect x="${cx - 20}" y="${fy + 44}" width="40" height="56" rx="14" fill="${shade}"/>
+      <ellipse cx="${cx - 52}" cy="${fy + 4}" rx="9" ry="14" fill="${shade}"/>
+      <ellipse cx="${cx + 52}" cy="${fy + 4}" rx="9" ry="14" fill="${shade}"/>
+      ${o.hoops ? `<circle cx="${cx - 52}" cy="${fy + 26}" r="9" fill="none" stroke="#D9B45A" stroke-width="3"/><circle cx="${cx + 52}" cy="${fy + 26}" r="9" fill="none" stroke="#D9B45A" stroke-width="3"/>` : ""}
+      <ellipse cx="${cx}" cy="${fy}" rx="50" ry="62" fill="${skin}"/>
+      ${o.fringe ? `<path d="M${cx - 52} ${fy - 18} Q${cx - 30} ${fy - 74} ${cx + 8} ${fy - 62} Q${cx + 44} ${fy - 56} ${cx + 52} ${fy - 20} Q${cx + 30} ${fy - 44} ${cx} ${fy - 40} Q${cx - 30} ${fy - 38} ${cx - 52} ${fy - 18} Z" fill="${hair}"/>` : ""}
+      <path d="M${cx - 30} ${ey - 13} q12 -6 22 0 M${cx + 8} ${ey - 13} q10 -6 22 0" stroke="${mix(hair, "#000000", .2)}" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+      <ellipse cx="${cx - 19}" cy="${ey}" rx="5.5" ry="4" fill="#1D1411"/>
+      <ellipse cx="${cx + 19}" cy="${ey}" rx="5.5" ry="4" fill="#1D1411"/>
+      <path d="M${cx - 3} ${ey + 10} q3 12 -2 16" stroke="${shade}" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <path d="M${cx - 15} ${ey + 34} q15 11 30 0" stroke="${mix(skin, "#6B2E2E", .55)}" stroke-width="4" fill="none" stroke-linecap="round"/>`;
+  }
+
+  function roomBackground() {
+    return `
+      <rect width="402" height="536" fill="#D9CDBF"/>
+      <rect x="258" y="34" width="116" height="190" rx="4" fill="#F1ECE4" stroke="#C9BBAA" stroke-width="7"/>
+      <path d="M316 34V224M258 129H374" stroke="#C9BBAA" stroke-width="5"/>
+      <rect x="0" y="424" width="402" height="112" fill="#CDBFAF"/>
+      <g fill="#6F8D69"><ellipse cx="52" cy="330" rx="15" ry="44" transform="rotate(-22 52 330)"/><ellipse cx="74" cy="322" rx="15" ry="46" transform="rotate(18 74 322)"/><ellipse cx="62" cy="300" rx="13" ry="40"/></g>
+      <rect x="34" y="364" width="58" height="66" rx="8" fill="#B07E55"/>`;
+  }
+
+  function sceneCoach(accentP, good) {
+    const eyesY = good ? 196 : 246;
+    const fy = eyesY + 12;
+    const p = person({ eyesY, skin: "#8A5A3C", hair: "#21160F", shirt: "#3E6A6C", bun: true, hoops: true });
+    const eyeColor = good ? "#34C759" : "#FFFFFF";
+    return `${roomBackground()}${p}
+      <rect x="${201 - 58}" y="${fy - 72}" width="116" height="144" fill="none" stroke="#FFFFFF" stroke-opacity=".9" stroke-width="1.5"/>
+      <line x1="178" y1="${eyesY}" x2="224" y2="${eyesY}" stroke="${eyeColor}" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="0" y1="178.7" x2="402" y2="178.7" stroke="${accentP}" stroke-opacity=".8" stroke-width="1.5" stroke-dasharray="7 6"/>`;
+  }
+
+  function sceneAnimal() {
+    const fur = "#1C1C21", furEdge = "#34343C", white = "#F5F2EC", cream = "#EFE6D6", eye = "#14213F";
+    return `
+      <rect width="402" height="536" fill="#E6DED6"/>
+      <rect x="250" y="0" width="152" height="330" fill="#D8CEC6"/>
+      <path d="M262 0V330M300 0V330M338 0V330" stroke="#CFC4BB" stroke-width="3"/>
+      <rect x="0" y="330" width="402" height="206" fill="#CFCBD8"/>
+      <g fill="#A9B3CC" opacity=".55"><circle cx="40" cy="360" r="5"/><circle cx="96" cy="350" r="3"/><circle cx="330" cy="372" r="6"/><circle cx="372" cy="352" r="3"/><circle cx="60" cy="500" r="6"/><circle cx="352" cy="492" r="5"/><circle cx="296" cy="520" r="3"/></g>
+      <ellipse cx="190" cy="430" rx="132" ry="54" fill="#D6C7BF"/>
+      <ellipse cx="190" cy="418" rx="104" ry="36" fill="#E6D9D1"/>
+      <path d="M86 418 q20 -26 50 -30 M294 418 q-20 -26 -50 -30" stroke="#CDBDB4" stroke-width="5" fill="none" stroke-linecap="round"/>
+      <ellipse cx="190" cy="372" rx="66" ry="58" fill="${fur}"/>
+      <path d="M128 360 q-6 -30 16 -50 M252 360 q6 -30 -16 -50" stroke="${furEdge}" stroke-width="4" fill="none" stroke-linecap="round"/>
+      <path d="M158 396 Q190 350 222 396 Q206 414 190 414 Q174 414 158 396 Z" fill="${white}"/>
+      <ellipse cx="168" cy="420" rx="12" ry="7" fill="${white}"/>
+      <ellipse cx="212" cy="420" rx="12" ry="7" fill="${white}"/>
+      <ellipse cx="190" cy="304" rx="46" ry="41" fill="${fur}"/>
+      <ellipse cx="146" cy="326" rx="17" ry="44" fill="${fur}" transform="rotate(14 146 326)"/>
+      <ellipse cx="234" cy="326" rx="17" ry="44" fill="${fur}" transform="rotate(-14 234 326)"/>
+      <path d="M140 296 q-4 30 4 58 M240 296 q4 30 -4 58" stroke="${furEdge}" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <path d="M184 268 Q190 262 196 268 L203 312 Q190 322 177 312 Z" fill="${white}"/>
+      <ellipse cx="190" cy="322" rx="22" ry="15" fill="${white}"/>
+      <ellipse cx="190" cy="328" rx="15" ry="8" fill="${cream}"/>
+      <ellipse cx="175" cy="324" rx="6" ry="3.5" fill="#F2A9B4" opacity=".6"/>
+      <ellipse cx="205" cy="324" rx="6" ry="3.5" fill="#F2A9B4" opacity=".6"/>
+      <ellipse cx="190" cy="314" rx="4.5" ry="3.2" fill="#E8A2A9"/>
+      <path d="M190 317 v4 m0 0 q-4 4 -8 2 m8 -2 q4 4 8 2" stroke="#B9868A" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+      <circle cx="167" cy="298" r="7.5" fill="${eye}" stroke="#2A3550" stroke-width="1.2"/>
+      <circle cx="213" cy="298" r="7.5" fill="${eye}" stroke="#2A3550" stroke-width="1.2"/>
+      <circle cx="164.5" cy="295.5" r="2.3" fill="#FFFFFF"/>
+      <circle cx="210.5" cy="295.5" r="2.3" fill="#FFFFFF"/>
+      <circle cx="169.5" cy="300.8" r="1" fill="#FFFFFF" opacity=".85"/>
+      <circle cx="215.5" cy="300.8" r="1" fill="#FFFFFF" opacity=".85"/>
+      <g stroke="#E6E2DA" stroke-width="1" stroke-linecap="round" opacity=".75" fill="none">
+        <path d="M172 320 q-30 -6 -54 -2"/><path d="M172 324 q-28 2 -50 10"/><path d="M208 320 q30 -6 54 -2"/><path d="M208 324 q28 2 50 10"/>
+      </g>
+      <rect x="116" y="250" width="148" height="182" rx="14" fill="none" stroke="#FFFFFF" stroke-opacity=".9" stroke-width="1.5"/>`;
+  }
+
+  function scenePortrait(id) {
+    const p = person({ eyesY: 200, skin: "#E2AF8B", hair: "#7A3B1C", shirt: "#E7D6C2", fringe: true });
+    return `
+      <defs><filter id="blur${id}" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="9"/></filter></defs>
+      <g filter="url(#blur${id})">
+        <rect width="402" height="536" fill="#2F4B4A"/>
+        <circle cx="60" cy="90" r="34" fill="#F2C38A" opacity=".85"/><circle cx="330" cy="70" r="26" fill="#F2B8A2" opacity=".8"/>
+        <circle cx="356" cy="210" r="40" fill="#E7D08F" opacity=".7"/><circle cx="40" cy="260" r="28" fill="#F6EDE6" opacity=".55"/>
+        <circle cx="300" cy="330" r="30" fill="#F2C38A" opacity=".6"/><circle cx="90" cy="430" r="44" fill="#86A88F" opacity=".7"/>
+        <rect x="0" y="420" width="402" height="116" fill="#24403F"/>
+      </g>${p}`;
+  }
+
+  // ---------- Small glyphs ----------
+  const glyph = {
+    flashOff: (c) => `<path d="M-2 -9 L-7 1 H-1 L-3 9 L6 -2 H0 L2 -9 Z" fill="none" stroke="${c}" stroke-width="1.8" stroke-linejoin="round"/><path d="M-8 -8 L8 8" stroke="${c}" stroke-width="1.8" stroke-linecap="round"/>`,
+    sliders: (c) => `<path d="M-9 -5 H9 M-9 0 H9 M-9 5 H9" stroke="${c}" stroke-width="1.8" stroke-linecap="round"/><circle cx="-3" cy="-5" r="2.4" fill="${c}"/><circle cx="4" cy="0" r="2.4" fill="${c}"/><circle cx="-1" cy="5" r="2.4" fill="${c}"/>`,
+    smile: (c) => `<circle r="7" fill="none" stroke="${c}" stroke-width="1.6"/><circle cx="-2.4" cy="-1.6" r="1" fill="${c}"/><circle cx="2.4" cy="-1.6" r="1" fill="${c}"/><path d="M-3.2 1.8 Q0 4.6 3.2 1.8" fill="none" stroke="${c}" stroke-width="1.4" stroke-linecap="round"/>`,
+    paw: (c) => `<ellipse cy="2.5" rx="4.5" ry="3.8" fill="${c}"/><circle cx="-5" cy="-3" r="1.9" fill="${c}"/><circle cx="-1.8" cy="-6" r="1.9" fill="${c}"/><circle cx="1.8" cy="-6" r="1.9" fill="${c}"/><circle cx="5" cy="-3" r="1.9" fill="${c}"/>`,
+    camera: (c) => `<rect x="-8" y="-5" width="16" height="11" rx="2.5" fill="${c}"/><rect x="-3.5" y="-8" width="7" height="4" rx="1" fill="${c}"/><circle cy="0.5" r="3.2" fill="#2A2A2A"/>`,
+    flip: (c) => `<path d="M-7 -1 A7 7 0 0 1 5 -5" fill="none" stroke="${c}" stroke-width="1.8" stroke-linecap="round"/><path d="M5 -9 L6 -4.5 L1.5 -3.5" fill="none" stroke="${c}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M7 1 A7 7 0 0 1 -5 5" fill="none" stroke="${c}" stroke-width="1.8" stroke-linecap="round"/><path d="M-5 9 L-6 4.5 L-1.5 3.5" fill="none" stroke="${c}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>`,
+    aperture: (c) => `<circle r="6.5" fill="none" stroke="${c}" stroke-width="1.6"/><path d="M-2 -6 L4 -1 M4 -4.5 L1 4 M5 2 L-4 3 M-0.5 6 L-4.5 -1 M-6 1.5 L-1 -6" stroke="${c}" stroke-width="1.2"/>`,
+    wand: (c) => `<path d="M-6 6 L4 -4" stroke="${c}" stroke-width="1.8" stroke-linecap="round"/><path d="M5 -9 V-5 M3 -7 H7 M-4 -6 V-3 M-5.5 -4.5 H-2.5" stroke="${c}" stroke-width="1.4" stroke-linecap="round"/>`,
+    dial: (c) => `<circle r="5.5" fill="none" stroke="${c}" stroke-width="1.6"/><path d="M0 -9 V-7 M0 7 V9 M-9 0 H-7 M7 0 H9 M-6.4 -6.4 L-5 -5 M5 5 L6.4 6.4 M-6.4 6.4 L-5 5 M5 -5 L6.4 -6.4" stroke="${c}" stroke-width="1.4" stroke-linecap="round"/>`,
+    check: (c) => `<path d="M-5 0 L-1.5 3.5 L5 -4" fill="none" stroke="${c}" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>`,
+  };
+  const g = (x, y, inner) => `<g transform="translate(${x} ${y})">${inner}</g>`;
+  const text = (x, y, s, size, fill, weight = 600, anchor = "middle", extra = "") =>
+    `<text x="${x}" y="${y}" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="${size}" font-weight="${weight}" fill="${fill}" text-anchor="${anchor}" ${extra}>${esc(s)}</text>`;
+
+  // ---------- Phone ----------
+  function phone({ theme = "peach", mode = "light", screen = "coach" } = {}) {
+    const id = ++uid;
+    const t = THEMES[theme], dark = mode === "dark";
+    const accBar = dark ? t.pastel : t.deep;
+    const accP = t.pastel;
+    const bars = dark ? mix("#000000", t.pastel, .1) : mix("#FFFFFF", t.deep, .16);
+    const ink = dark ? "#F2F2F2" : "#1C1C1E";
+    const glassFill = dark ? mix("#1C1C1E", t.pastel, .26) : mix("#FFFFFF", t.deep, .12);
+    const glassStroke = dark ? "rgba(255,255,255,.14)" : "rgba(255,255,255,.95)";
+    const portrait = screen === "portrait";
+    const animals = screen === "animals";
+
+    let scene;
+    if (screen === "great") scene = sceneCoach(accP, true);
+    else if (screen === "portrait") scene = scenePortrait(id);
+    else if (screen === "animals") scene = sceneAnimal();
+    else scene = sceneCoach(accP, false);
+
+    let hint = "";
+    if (screen === "coach") hint = "Tilt the camera down a little.";
+    if (screen === "great") hint = "Looking great. Press the shutter.";
+    if (screen === "animals") hint = "Move closer or zoom in.";
+    const hintSvg = hint ? `<rect x="${201 - (hint.length * 3.55 + 18)}" y="12" width="${hint.length * 7.1 + 36}" height="34" rx="17" fill="${mix("#2A2A2A", accP, .3)}" fill-opacity=".86"/>${text(201, 34, hint, 13, "#FFFFFF", 500)}` : "";
+
+    const labels = ["0.5", "1", "1.2×", "2", "4", "8"];
+    const lens = labels.map((l, i) => {
+      const x = 98 + i * 41;
+      const sel = i === 2;
+      return `${sel ? `<rect x="${x - 21}" y="606" width="42" height="28" rx="14" fill="${accP}" fill-opacity=".72"/>` : ""}${text(x, 625, l, 13, "#FFFFFF", 600)}`;
+    }).join("");
+
+    const subjectGlyph = animals ? glyph.paw(ink) : glyph.smile(ink);
+    const pillLabel = portrait ? "HEIF · 48 MP" : "RAW · 48 MP";
+    const pillW = portrait ? 182 : 150;
+    const pillX = 201 - pillW / 2;
+    const pillIcons = portrait ? g(pillX + 142, 88, glyph.aperture(ink)) : "";
+
+    const statusBar = `<rect x="140" y="11" width="122" height="36" rx="18" fill="#000000"/>`;
+
+    if (screen === "settings") return settingsPhone(id, t, dark);
+
+    const menu = screen === "menu" ? quickMenu(accP) : "";
+    const dim = screen === "menu" ? `<rect x="0" y="114" width="402" height="536" fill="#000000" fill-opacity=".28"/>` : "";
+
+    const shutterInner = portrait ? accBar : "#FFFFFF";
+    const portraitStatus = portrait ? `<rect x="146" y="566" width="110" height="26" rx="13" fill="${mix("#2A2A2A", accP, .25)}" fill-opacity=".85"/>${g(166, 579, glyph.aperture(accP))}${text(209, 584, "Portrait", 12.5, accP, 600)}` : "";
+
+    const body = `
+      <rect width="402" height="874" fill="${bars}"/>
+      <g clip-path="url(#vf${id})"><g transform="translate(0 114)">${scene}${hintSvg}</g>${dim}</g>
+      ${portraitStatus}
+      <rect x="77" y="602" width="248" height="36" rx="18" fill="${mix("#3A3A3A", accP, .22)}" fill-opacity=".78" stroke="rgba(255,255,255,.18)"/>
+      ${lens}
+      ${menu}
+      <circle cx="38" cy="88" r="19" fill="${glassFill}" stroke="${glassStroke}"/>${g(38, 88, glyph.flashOff(ink))}
+      <rect x="${pillX}" y="71" width="${pillW}" height="34" rx="17" fill="${screen === "menu" ? mix(glassFill, accBar, .2) : glassFill}" stroke="${glassStroke}"/>
+      ${g(pillX + 22, 88, subjectGlyph)}
+      ${text(pillX + 38, 93, pillLabel, 13, ink, 600, "start")}
+      ${pillIcons}
+      <path d="M${pillX + pillW - 24} ${screen === "menu" ? 91 : 86} l4 ${screen === "menu" ? -4 : 4} l4 ${screen === "menu" ? 4 : -4}" fill="none" stroke="${ink}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="364" cy="88" r="19" fill="${glassFill}" stroke="${glassStroke}"/>${g(364, 88, glyph.sliders(ink))}
+      <rect x="121" y="686" width="160" height="32" rx="16" fill="${glassFill}" stroke="${glassStroke}"/>
+      <rect x="${portrait ? 201 : 124}" y="689" width="${portrait ? 77 : 70}" height="26" rx="13" fill="${ink}" fill-opacity=".08"/>
+      ${text(159, 707, "PHOTO", 11, portrait ? ink : accBar, 600, "middle", 'letter-spacing="1.2" fill-opacity="' + (portrait ? ".8" : "1") + '"')}
+      ${text(240, 707, "PORTRAIT", 11, portrait ? accBar : ink, 600, "middle", 'letter-spacing="1.2" fill-opacity="' + (portrait ? "1" : ".8") + '"')}
+      <circle cx="201" cy="${screen === "great" ? 733 : 733}" r="4" fill="${accBar}" opacity="${screen === "great" ? 1 : 0}"/>
+      <circle cx="201" cy="772" r="33" fill="none" stroke="${accBar}" stroke-width="3.5"/>
+      <circle cx="201" cy="772" r="27" fill="${shutterInner}" ${dark ? "" : 'stroke="rgba(0,0,0,.06)"'}/>
+      <g clip-path="url(#th${id})"><g transform="translate(44 750) scale(0.1095)"><g transform="translate(0 -114)">${screen === "animals" ? sceneAnimal() : sceneCoach(accP, true).replace(/<rect x="143[^>]*>|<line[^>]*>/g, "")}</g></g></g>
+      <rect x="44" y="750" width="44" height="44" rx="9" fill="none" stroke="${accBar}" stroke-opacity=".7"/>
+      <circle cx="358" cy="772" r="22" fill="${glassFill}" stroke="${glassStroke}"/>${g(358, 772, glyph.flip(ink))}
+      ${statusBar}
+      <rect x="134" y="859" width="134" height="5" rx="2.5" fill="${dark ? "#FFFFFF" : "#000000"}" fill-opacity=".85"/>`;
+
+    return frame(id, body, `<clipPath id="vf${id}"><rect x="0" y="114" width="402" height="536"/></clipPath><clipPath id="th${id}"><rect x="44" y="750" width="44" height="44" rx="9"/></clipPath>`);
+  }
+
+  function quickMenu(accP) {
+    const panelFill = "rgba(58,58,60,.82)";
+    const row = (y, title, items, sel) => {
+      const startX = 120, width = 258, w = width / items.length;
+      return text(28, y + 5, title, 13, "#FFFFFF", 600, "start", 'fill-opacity=".75"') + items.map((it, i) => {
+        const cx = startX + w * i + w / 2;
+        const isSel = i === sel;
+        return `${isSel ? `<rect x="${cx - w / 2 + 3}" y="${y - 14}" width="${w - 6}" height="28" rx="14" fill="#FFFFFF" fill-opacity=".14"/>` : ""}${typeof it === "string" ? text(cx, y + 5, it, 13, isSel ? accP : "#FFFFFF", 600) : g(cx, y, it(isSel ? accP : "#FFFFFF"))}`;
+      }).join("");
+    };
+    const chip = (x, label, glyphFn) => `<rect x="${x}" y="296" width="114" height="32" rx="16" fill="#FFFFFF" fill-opacity=".08"/>${g(x + 26, 312, glyphFn("#FFFFFF"))}${text(x + 66, 317, label, 13, "#FFFFFF", 600)}`;
+    return `
+      <rect x="12" y="120" width="378" height="222" rx="22" fill="${panelFill}" stroke="rgba(255,255,255,.16)"/>
+      ${row(150, "Subject", [glyph.smile, glyph.paw, glyph.camera], 0)}
+      ${row(188, "Format", ["RAW", "HEIF+RAW", "HEIF", "JPEG"], 0)}
+      ${row(226, "Resolution", ["12 MP", "48 MP"], 1)}
+      ${row(264, "Shape", ["4:3", "16:9", "1:1"], 0)}
+      ${chip(24, "Portrait", glyph.aperture)}${chip(144, "Auto", glyph.wand)}${chip(264, "Manual", glyph.dial)}`;
+  }
+
+  function settingsPhone(id, t, dark) {
+    const bg = dark ? "#000000" : "#F2F2F7", card = dark ? "#1C1C1E" : "#FFFFFF";
+    const ink = dark ? "#FFFFFF" : "#000000", muted = dark ? "#98989F" : "#6C6C70";
+    const acc = dark ? t.pastel : t.deep;
+    const sep = dark ? "#38383A" : "#E5E5EA";
+    const themes = Object.entries(THEMES);
+    const swatches = themes.map(([key, th], i) => {
+      const x = 52 + i * 59, sel = th === t;
+      const fill = dark ? th.pastel : th.deep;
+      return `<circle cx="${x}" cy="252" r="15" fill="${fill}"/>${sel ? `<circle cx="${x}" cy="252" r="19" fill="none" stroke="${fill}" stroke-width="2"/>${g(x, 252, glyph.check(dark ? "#000000" : "#FFFFFF"))}` : ""}${text(x, 284, th.name, 11, sel ? ink : muted, sel ? 600 : 400)}`;
+    }).join("");
+    const picks = ["AppIcon", "Lens-Teal", "Lens-DeepTeal", "Camera-Shutter", "Arch-FocusBrackets", "Arch-Spiral", "Spiral-Bold", "Spiral-DeepTeal"];
+    const iconLabels = { "AppIcon": "Default", "Lens-Teal": "Teal", "Lens-DeepTeal": "Deep teal", "Camera-Shutter": "Shutter", "Arch-FocusBrackets": "Portrait", "Arch-Spiral": "Gallery", "Spiral-Bold": "Golden", "Spiral-DeepTeal": "Night" };
+    const icons = picks.map((name, i) => {
+      const col = i % 4, rowIdx = Math.floor(i / 4);
+      const x = 46 + col * 84, y = 372 + rowIdx * 96;
+      return `<clipPath id="ic${id}_${i}"><rect x="${x}" y="${y}" width="58" height="58" rx="13"/></clipPath><image href="media/icons/${name}.png" x="${x}" y="${y}" width="58" height="58" clip-path="url(#ic${id}_${i})"/>${i === 0 ? `<rect x="${x - 4}" y="${y - 4}" width="66" height="66" rx="16" fill="none" stroke="${acc}" stroke-width="2.5"/>` : ""}${text(x + 29, y + 78, iconLabels[name], 11, i === 0 ? ink : muted, i === 0 ? 600 : 400)}`;
+    }).join("");
+    const segX = [92, 201, 310];
+    const segSel = dark ? 2 : 1;
+    const body = `
+      <rect width="402" height="874" fill="${dark ? "#000000" : "#B9AFA8"}"/>
+      <rect x="0" y="56" width="402" height="830" rx="38" fill="${bg}"/>
+      <rect x="181" y="64" width="40" height="5" rx="2.5" fill="${muted}" fill-opacity=".5"/>
+      ${text(201, 108, "Settings", 17, ink, 600)}
+      <rect x="320" y="88" width="64" height="34" rx="17" fill="${card}" stroke="${sep}"/>${text(352, 110, "Done", 15, acc, 600)}
+      ${text(32, 166, "Appearance", 15, muted, 600, "start")}
+      <rect x="16" y="178" width="370" height="132" rx="22" fill="${card}"/>
+      <rect x="30" y="190" width="342" height="30" rx="15" fill="${dark ? "#2C2C2E" : "#EEEEF0"}"/>
+      <rect x="${segX[segSel] - 54}" y="193" width="108" height="24" rx="12" fill="${dark ? "#636366" : "#FFFFFF"}"/>
+      ${["System", "Light", "Dark"].map((s, i) => text(segX[i], 210, s, 13, ink, i === segSel ? 600 : 500)).join("")}
+      ${swatches}
+      ${text(32, 340, "App Icon", 15, muted, 600, "start")}
+      <rect x="16" y="352" width="370" height="208" rx="22" fill="${card}"/>
+      ${icons}
+      ${text(32, 596, "Settings Memory", 15, muted, 600, "start")}
+      <rect x="16" y="608" width="370" height="96" rx="22" fill="${card}"/>
+      ${text(32, 640, "Remember Settings", 16, ink, 400, "start")}
+      <rect x="318" y="623" width="52" height="30" rx="15" fill="${acc}"/><circle cx="355" cy="638" r="13" fill="#FFFFFF"/>
+      <line x1="32" y1="656" x2="386" y2="656" stroke="${sep}"/>
+      ${text(32, 686, "Reset All Settings", 16, "#FF3B30", 400, "start")}
+      ${text(32, 740, "Help", 15, muted, 600, "start")}
+      <rect x="16" y="752" width="370" height="96" rx="22" fill="${card}"/>
+      ${text(32, 784, "Take the Tour", 16, ink, 400, "start")}
+      <line x1="32" y1="800" x2="386" y2="800" stroke="${sep}"/>
+      ${text(32, 830, "User Guide", 16, ink, 400, "start")}
+      <rect x="140" y="11" width="122" height="36" rx="18" fill="#000000"/>
+      <rect x="134" y="859" width="134" height="5" rx="2.5" fill="${dark ? "#FFFFFF" : "#000000"}" fill-opacity=".85"/>`;
+    return frame(id, body, "");
+  }
+
+  function frame(id, body, defs) {
+    return `<svg viewBox="0 0 432 904" xmlns="http://www.w3.org/2000/svg" role="presentation">
+      <defs><clipPath id="screen${id}"><rect x="15" y="15" width="402" height="874" rx="56"/></clipPath>${defs}</defs>
+      <rect x="1" y="1" width="430" height="902" rx="70" fill="#3A3A3C"/>
+      <rect x="4" y="4" width="424" height="896" rx="67" fill="#121214"/>
+      <rect x="-1" y="190" width="3" height="34" rx="1.5" fill="#3A3A3C"/><rect x="-1" y="248" width="3" height="60" rx="1.5" fill="#3A3A3C"/><rect x="-1" y="320" width="3" height="60" rx="1.5" fill="#3A3A3C"/><rect x="430" y="260" width="3" height="92" rx="1.5" fill="#3A3A3C"/>
+      <g clip-path="url(#screen${id})"><g transform="translate(15 15)">${body}</g></g>
+    </svg>`;
+  }
+
+  // ---------- Hero ----------
+  $("#heroPhones").innerHTML = [
+    phone({ theme: "sky", mode: "dark", screen: "portrait" }),
+    phone({ theme: "peach", mode: "light", screen: "coach" }),
+    phone({ theme: "mint", mode: "light", screen: "animals" }),
+  ].map((s) => `<div class="phone">${s}</div>`).join("");
+
+  // ---------- Screens studio ----------
+  const studio = { screen: "coach", theme: "peach", mode: "light" };
+  function chips(container, entries, key, labelFn) {
+    container.innerHTML = entries.map(([value, label]) => `<button type="button" class="chip" data-value="${value}" aria-pressed="false">${esc(label)}</button>`).join("");
+    container.addEventListener("click", (e) => {
+      const b = e.target.closest("button[data-value]");
+      if (!b) return;
+      studio[key] = b.dataset.value;
+      renderStudio();
+    });
+  }
+  chips($("#screenChips"), Object.entries(SCREENS).map(([k, v]) => [k, v.name]), "screen");
+  chips($("#themeChips"), Object.entries(THEMES).map(([k, v]) => [k, v.name]), "theme");
+  chips($("#modeChips"), [["light", "Light"], ["dark", "Dark"]], "mode");
+  function renderStudio() {
+    $("#studioPhone").innerHTML = phone(studio);
+    for (const [sel, key] of [["#screenChips", "screen"], ["#themeChips", "theme"], ["#modeChips", "mode"]]) {
+      document.querySelectorAll(`${sel} .chip`).forEach((c) => c.setAttribute("aria-pressed", String(c.dataset.value === studio[key])));
+    }
+    const s = SCREENS[studio.screen];
+    $("#screenCaption").innerHTML = `<h3>${esc(s.title)}</h3><p>${esc(s.text)}</p>`;
+    $("#studioPhone").setAttribute("aria-label", `Illustration of the ${s.name} screen in the ${THEMES[studio.theme].name} theme, ${studio.mode} appearance`);
+  }
+  renderStudio();
+
+  // ---------- Features and how it works ----------
+  const cards = (list) => list.map(([kicker, title, body]) => `<article class="card"><p class="kicker">${esc(kicker)}</p><h3>${esc(title)}</h3><p>${esc(body)}</p></article>`).join("");
+  $("#featureGrid").innerHTML = cards(FEATURES);
+  $("#howGrid").innerHTML = cards(HOW);
+
+  // ---------- Icons ----------
+  const groups = {};
+  ICONS.filter((i) => i.group !== "main").forEach((i) => (groups[i.group] = groups[i.group] || []).push(i));
+  $("#iconGroups").innerHTML = Object.entries(groups).map(([name, list]) => `
+    <section class="icon-group"><h3>${esc(name)}</h3><div class="icon-grid">
+      ${list.map((i) => `<figure><img src="media/icons/${i.id}.png" alt="${esc(i.label)} icon" width="84" height="84" loading="lazy"><figcaption>${esc(i.label)}</figcaption></figure>`).join("")}
+    </div></section>`).join("");
+
+  // ---------- Tabs ----------
+  const tabs = [...document.querySelectorAll(".tab")];
+  function showTab(name) {
+    if (!document.getElementById("panel-" + name)) name = "about";
+    tabs.forEach((t) => t.setAttribute("aria-selected", String(t.dataset.tab === name)));
+    document.querySelectorAll(".panel").forEach((p) => (p.hidden = p.id !== "panel-" + name));
+  }
+  tabs.forEach((t) => t.addEventListener("click", () => { history.replaceState(null, "", "#" + t.dataset.tab); showTab(t.dataset.tab); }));
+  tabs.forEach((t, i) => t.addEventListener("keydown", (e) => {
+    if (e.key !== "ArrowRight" && e.key !== "ArrowLeft") return;
+    const next = tabs[(i + (e.key === "ArrowRight" ? 1 : tabs.length - 1)) % tabs.length];
+    next.focus(); next.click();
+  }));
+  document.querySelectorAll('a[href="#screens"]').forEach((a) => a.addEventListener("click", () => setTimeout(() => showTab("screens"), 0)));
+  showTab((location.hash || "#about").slice(1));
+  window.addEventListener("hashchange", () => showTab(location.hash.slice(1)));
+})();
+</script>
+</body>
+</html>
