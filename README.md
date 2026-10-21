@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <a href="https://alyssaagard.github.io/ars-imaginis-showcase/"><b>Explore the showcase</b></a>
+  <a href="https://arsimaginis.alyssaagard.dev/"><b>Explore the showcase</b></a>
   &nbsp;&middot;&nbsp;
   <a href="https://testflight.apple.com/join/1mFS1sYV"><b>Try the beta on TestFlight</b></a>
 </p>
