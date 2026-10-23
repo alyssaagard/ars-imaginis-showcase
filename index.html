@@ -4,17 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ars Imaginis</title>
-<meta name="description" content="Ars Imaginis is an iPhone camera that coaches you, live, to take better and more flattering photos of the people you love.">
+<meta name="description" content="Ars Imaginis is an iPhone camera that coaches you, live, to take better and more flattering photos of people.">
 <link rel="canonical" href="https://arsimaginis.alyssaagard.dev/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Ars Imaginis">
 <meta property="og:url" content="https://arsimaginis.alyssaagard.dev/">
 <meta property="og:title" content="Ars Imaginis">
-<meta property="og:description" content="An iPhone camera that coaches you, live, to take better and more flattering photos of the people you love. Now in public beta on TestFlight.">
+<meta property="og:description" content="An iPhone camera that coaches you, live, to take better and more flattering photos of people. Now in public beta on TestFlight.">
 <meta property="og:image" content="https://arsimaginis.alyssaagard.dev/media/social-preview.png">
 <meta property="og:image:width" content="1280">
 <meta property="og:image:height" content="640">
-<meta property="og:image:alt" content="Ars Imaginis: a camera that coaches you to take better photos of the people you love, shown on three iPhones.">
+<meta property="og:image:alt" content="Ars Imaginis: a camera that coaches you to take better photos of people, shown on three iPhones.">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="favicon.ico" sizes="48x48">
 <link rel="icon" type="image/png" sizes="32x32" href="media/ars-imaginis-icon-32.png">
@@ -144,7 +144,7 @@ footer .wrap { display: flex; gap: 16px; flex-wrap: wrap; justify-content: space
 <main class="wrap">
   <section class="hero" aria-labelledby="hero-title">
     <div>
-      <h1 id="hero-title">Better photos of the people you love.</h1>
+      <h1 id="hero-title">Better photos of people.</h1>
       <p>Ars Imaginis is an iPhone camera that coaches you while you shoot. It reads the scene and tells you what to do, like "tilt down" or "pan left", so anyone can take a flattering photo of someone else.</p>
       <p>It captures with Apple's full-quality photo pipeline and saves every original untouched.</p>
       <div class="cta">
@@ -191,7 +191,7 @@ footer .wrap { display: flex; gap: 16px; flex-wrap: wrap; justify-content: space
             <tr><th scope="row">Status</th><td>Public beta on TestFlight</td></tr>
             <tr><th scope="row">Built</th><td>October 2026</td></tr>
             <tr><th scope="row">Language and interface</th><td>Swift and SwiftUI, with Liquid Glass</td></tr>
-            <tr><th scope="row">Camera</th><td>AVFoundation, full-quality capture, LiDAR depth</td></tr>
+            <tr><th scope="row">Camera</th><td>AVFoundation, full-quality capture, LiDAR and dual-camera depth</td></tr>
             <tr><th scope="row">On-device intelligence</th><td>Apple Vision for faces, bodies, and animals; Core Motion for level and steadiness</td></tr>
             <tr><th scope="row">Imaging</th><td>Core Image for looks and depth blur, always on a separate copy</td></tr>
             <tr><th scope="row">Privacy</th><td>Collects nothing; no network connection</td></tr>
@@ -378,41 +378,45 @@ footer .wrap { display: flex; gap: 16px; flex-wrap: wrap; justify-content: space
   const SCREENS = {
     coach: { name: "Coaching", title: "Live coaching", text: "Portrait guides outline the face, mark the eye line, and show the upper third, where eyes usually look best. One clear instruction appears at the top, and the line turns green when the eyes are right." },
     great: { name: "Looks great", title: "Ready when you are", text: "When the framing is right, the app says so. A small dot above the shutter lights up when the phone is steady enough for a sharp photo." },
-    menu: { name: "Quick menu", title: "Everything in one pill", text: "Tap the pill at the top to switch subjects (people, animals, or still subjects), change format, resolution, and shape, and turn on Portrait, auto-capture, or the manual controls." },
+    menu: { name: "Quick menu", title: "Everything in one pill", text: "Tap the pill at the top to switch subjects (people, animals, or still subjects), change format, resolution, shape, and the timer, and turn on Portrait, auto-capture, Live Photos, Solo Mode, or the manual controls. The pill always shows the format and size of your next photo." },
     portrait: { name: "Portrait", title: "Portrait with adjustable blur", text: "Portrait saves depth inside the original at full resolution and a second copy with the background blurred. The blur can also be changed later in the Photos app." },
     selfie: { name: "Selfies", title: "Selfies, coached too", text: "On the front camera the viewfinder works like a mirror, and the portrait guides follow your face. Tap 1, 1.5, or 2 to frame tighter. Turn on Mirror Front Camera to save selfies exactly as they look in the viewfinder, or leave it off to save them the way others see you, like Apple's Camera." },
     animals: { name: "Animals", title: "Animals too", text: "Switch to Animals and the app finds the animal, boxes it, and helps you keep it centered, close enough, and fully in frame. Hank the rabbit is ready for his picture!" },
-    settings: { name: "Themes and icons", title: "Make it yours", text: "Six color themes, light or dark appearance, and a picker of alternate app icons. Peach is the default." },
+    settings: { name: "Themes and icons", title: "Make it yours", text: "Six color themes, light or dark appearance, and a picker of alternate app icons, all in Settings > Appearance. Peach is the default." },
   };
 
   const FEATURES = [
     ["Coaching", "Live framing guidance", "Faces, eye line, headroom, cropping at joints, lens choice, side light, and backlight, turned into plain instructions like \"tilt down\" and \"move closer.\""],
+    ["Coaching", "Posing tips", "Turn them on with the portrait guides, and once the framing is right the app suggests one small pose change at a time for one person, like angling the body or giving the hands something to do. They never hold back the shot."],
     ["Coaching", "People, animals, and still subjects", "People get the full coaching set. Animals mode keeps pets centered and in frame. Still Subjects turns coaching off for food, objects, and places."],
     ["Coaching", "Steady dot and auto-capture", "A dot lights up when the phone is still enough for a sharp photo. Auto-capture takes the shot for you when everything is right."],
-    ["Quality", "Apple's full-quality pipeline", "Every photo goes through Apple's highest-quality processing, and the original is saved byte for byte, with the same metadata as the built-in Camera."],
+    ["Coaching", "Lens Smudge Alerts", "If the lens looks smudged, a short message suggests wiping it for sharper photos. It's on by default, works where your iPhone supports it, and never changes your photos."],
+    ["Quality", "Apple's full-quality pipeline", "Photos go through Apple's highest-quality processing, and the original is saved byte for byte, with the same metadata as the built-in Camera. For fast moments, Rapid Shooting (off by default) lets the camera lighten processing on photos taken in quick succession."],
     ["Quality", "The whole photo in the viewfinder", "What you see is exactly what you get. 16:9 and 1:1 shade the viewfinder instead of cropping, so the original keeps its full frame."],
-    ["Quality", "RAW, HEIF, and JPEG at up to 48 MP", "Apple ProRAW, HEIF, HEIF with RAW, and JPEG, at 12, 24, or 48 MP. Zoom never invents pixels the sensor did not capture."],
-    ["Lenses", "Every lens, plus 28 and 35 mm", "Ultra wide, wide, and telephoto, with optional 28 mm and 35 mm framings and a choice of which lens the app opens at."],
+    ["Quality", "RAW, HEIF, and JPEG at 12 or 48 MP", "Apple ProRAW, HEIF, HEIF with RAW, and JPEG, at 12 or 48 MP. The pill shows the real size of the next photo, and zoomed framings like 1.2, 2, and 8 are 12 MP, because the app never adds pixels the sensor did not capture. RAW files include a full-size preview, so they look finished in Photos."],
+    ["Lenses", "Every lens, plus 28 and 35 mm", "Ultra wide, wide, and telephoto, opening at 24 mm (1x) by default, like Apple's Camera. Settings > Lenses lets you show or hide 28 mm and 35 mm framings and choose your Default Lens."],
     ["Lenses", "Selfies, coached too", "On the front camera the guides follow your face in a mirror-style viewfinder, with 1, 1.5, and 2 zoom buttons and an optional Mirror Front Camera setting."],
     ["Lenses", "Auto Macro", "Get close and the app switches to the ultra wide lens for macro focus, keeping the same framing, just like Apple's Camera."],
-    ["Creative", "Portrait mode", "Depth saved at full resolution with the LiDAR camera, plus a second copy with adjustable background blur."],
+    ["Creative", "Portrait mode", "Portrait at the lenses where your iPhone can measure depth without enlarging the photo, 1x and 4x on iPhone 17 Pro, with depth saved alongside the photo and a second copy with adjustable background blur."],
     ["Creative", "Looks with skin-tone guidance", "Eight color looks, fine-tuning sliders, and advice organized by undertone and light. Looks always go on a separate copy."],
+    ["Creative", "Silent Live Photos", "Save a few seconds of motion around each HEIF or JPEG photo. Live Photos are off while Portrait is on, like Apple's Camera. They're silent, so the app never uses the microphone, and the photo itself is still saved untouched."],
     ["Control", "Tap, slide, and manual", "Tap to focus and slide to brighten or darken, like the built-in Camera. Manual exposure, shutter, ISO, white balance, and focus are one tap away."],
+    ["Control", "Timer and Solo Mode", "A 3, 5, or 10 second timer with a large countdown, and the flash blinks on the back camera. For photos of yourself with the back camera, Solo Mode can wait until you're fully in frame, then signals with quick flashes, a chime, or both, and counts down."],
     ["Control", "Courtesy flash", "A gentle flash of light after each photo lets the person you're photographing know the shot was taken."],
     ["Yours", "Themes, dark mode, and icons", "Six themes, light or dark appearance, and alternate app icons. Settings are remembered, and one tap resets everything."],
     ["Yours", "A private session gallery", "Review the photos from this session in the app. They're already saved to your library, and the app's copies disappear when it closes."],
-    ["Yours", "Guided from the first launch", "A welcome, the terms, and a short optional tour, plus a full user guide in Settings."],
+    ["Yours", "Guided from the first launch", "A welcome, the terms, and a short optional tour, plus Settings grouped by topic with each description right under its option, and a full user guide."],
   ];
 
   const HOW = [
     ["Capture", "Apple's camera pipeline", "AVFoundation drives every lens at its highest-quality setting, with zero shutter lag and responsive capture, and never requests more pixels than the sensor provides."],
     ["Capture", "Untouched originals", "Photos are saved through PhotoKit exactly as the camera produced them. Anything creative, like looks or blur, is rendered into a separate second photo."],
-    ["Depth", "Full-resolution depth", "Portrait uses the LiDAR camera only when it can keep the full 48 MP resolution and Apple's best processing. Otherwise depth is skipped rather than lowering quality."],
+    ["Depth", "Depth that never enlarges", "At 1x, Portrait keeps the full 48 MP resolution with the LiDAR camera. At 4x it uses the main and telephoto cameras together for 12 MP portraits, and it never digitally enlarges a portrait."],
     ["Coaching", "On-device vision", "Apple's Vision framework finds faces, eye positions, body joints, and animals about ten times a second. Results are smoothed over several frames so tips don't flicker."],
     ["Coaching", "Motion sensing", "Core Motion powers the level and the steadiness signal that drives the steady dot and auto-capture."],
     ["Imaging", "Looks and blur", "Core Image renders color looks and Apple's portrait blur from the saved depth, in 10-bit HEIF, on a background queue so the camera never waits."],
-    ["Interface", "SwiftUI and Liquid Glass", "A native SwiftUI interface with Liquid Glass controls, six themes in light and dark, and a layout modeled on Apple's Camera."],
-    ["Privacy", "Nothing leaves the phone", "No accounts, analytics, advertising, or network code. Session previews live in temporary storage that is cleared when the app closes."],
+    ["Interface", "SwiftUI and Liquid Glass", "A native SwiftUI interface with Liquid Glass controls, six themes in light and dark, and a layout modeled on Apple's Camera. Icons, lens numbers, tips, and the countdown turn to stay upright when the phone turns, unless Portrait Orientation Lock is on."],
+    ["Privacy", "Nothing leaves the phone", "No accounts, analytics, advertising, or network code, and Live Photos are silent, so the microphone is never used. Session previews live in temporary storage that is cleared when the app closes."],
   ];
 
   const $ = (s, r = document) => r.querySelector(s);
@@ -533,6 +537,8 @@ footer .wrap { display: flex; gap: 16px; flex-wrap: wrap; justify-content: space
     wand: (c) => `<path d="M-6 6 L4 -4" stroke="${c}" stroke-width="1.8" stroke-linecap="round"/><path d="M5 -9 V-5 M3 -7 H7 M-4 -6 V-3 M-5.5 -4.5 H-2.5" stroke="${c}" stroke-width="1.4" stroke-linecap="round"/>`,
     dial: (c) => `<circle r="5.5" fill="none" stroke="${c}" stroke-width="1.6"/><path d="M0 -9 V-7 M0 7 V9 M-9 0 H-7 M7 0 H9 M-6.4 -6.4 L-5 -5 M5 5 L6.4 6.4 M-6.4 6.4 L-5 5 M5 -5 L6.4 -6.4" stroke="${c}" stroke-width="1.4" stroke-linecap="round"/>`,
     check: (c) => `<path d="M-5 0 L-1.5 3.5 L5 -4" fill="none" stroke="${c}" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>`,
+    live: (c) => `<circle r="8" fill="none" stroke="${c}" stroke-width="1.3" stroke-dasharray="1.5 2"/><circle r="5" fill="none" stroke="${c}" stroke-width="1.6"/><circle r="2" fill="${c}"/>`,
+    solo: (c) => `<circle cy="-6.5" r="2.6" fill="${c}"/><path d="M0 -3 V3.5 M-5 -0.5 H5 M0 3.5 L-3.2 9 M0 3.5 L3.2 9" fill="none" stroke="${c}" stroke-width="1.8" stroke-linecap="round"/>`,
   };
   const g = (x, y, inner) => `<g transform="translate(${x} ${y})">${inner}</g>`;
   const text = (x, y, s, size, fill, weight = 600, anchor = "middle", extra = "") =>
@@ -564,16 +570,16 @@ footer .wrap { display: flex; gap: 16px; flex-wrap: wrap; justify-content: space
     if (screen === "animals") hint = "Move closer or zoom in.";
     const hintSvg = hint ? `<rect x="${201 - (hint.length * 3.55 + 18)}" y="12" width="${hint.length * 7.1 + 36}" height="34" rx="17" fill="${mix("#2A2A2A", accP, .3)}" fill-opacity=".86"/>${text(201, 34, hint, 13, "#FFFFFF", 500)}` : "";
 
-    const labels = selfie ? ["1×", "1.5", "2"] : ["0.5", "1", "1.2×", "2", "4", "8"];
+    const labels = selfie ? ["1×", "1.5", "2"] : ["0.5", "1×", "1.2", "2", "4", "8"];
     const lensStart = selfie ? 160 : 98;
     const lens = labels.map((l, i) => {
       const x = lensStart + i * 41;
-      const sel = i === (selfie ? 0 : 2);
+      const sel = i === (selfie ? 0 : 1);
       return `${sel ? `<rect x="${x - 21}" y="606" width="42" height="28" rx="14" fill="${accP}" fill-opacity=".72"/>` : ""}${text(x, 625, l, 13, "#FFFFFF", 600)}`;
     }).join("");
 
     const subjectGlyph = animals ? glyph.paw(ink) : glyph.smile(ink);
-    const pillLabel = portrait ? "HEIF · 48 MP" : "RAW · 48 MP";
+    const pillLabel = portrait ? "HEIF · 48 MP" : selfie ? "HEIF · 12 MP" : "RAW · 48 MP";
     const pillW = portrait ? 182 : 150;
     const pillX = 201 - pillW / 2;
     const pillIcons = portrait ? g(pillX + 142, 88, glyph.aperture(ink)) : "";
@@ -628,14 +634,16 @@ footer .wrap { display: flex; gap: 16px; flex-wrap: wrap; justify-content: space
         return `${isSel ? `<rect x="${cx - w / 2 + 3}" y="${y - 14}" width="${w - 6}" height="28" rx="14" fill="#FFFFFF" fill-opacity=".14"/>` : ""}${typeof it === "string" ? text(cx, y + 5, it, 13, isSel ? accP : "#FFFFFF", 600) : g(cx, y, it(isSel ? accP : "#FFFFFF"))}`;
       }).join("");
     };
-    const chip = (x, label, glyphFn) => `<rect x="${x}" y="296" width="114" height="32" rx="16" fill="#FFFFFF" fill-opacity=".08"/>${g(x + 26, 312, glyphFn("#FFFFFF"))}${text(x + 66, 317, label, 13, "#FFFFFF", 600)}`;
+    const chip = (x, y, label, glyphFn, dim) => `<g opacity="${dim ? .4 : 1}"><rect x="${x}" y="${y}" width="114" height="32" rx="16" fill="#FFFFFF" fill-opacity=".08"/>${g(x + 26, y + 16, glyphFn("#FFFFFF"))}${text(x + 66, y + 21, label, 13, "#FFFFFF", 600)}</g>`;
     return `
-      <rect x="12" y="120" width="378" height="222" rx="22" fill="${panelFill}" stroke="rgba(255,255,255,.16)"/>
+      <rect x="12" y="120" width="378" height="298" rx="22" fill="${panelFill}" stroke="rgba(255,255,255,.16)"/>
       ${row(150, "Subject", [glyph.smile, glyph.paw, glyph.camera], 0)}
       ${row(188, "Format", ["RAW", "HEIF+RAW", "HEIF", "JPEG"], 0)}
       ${row(226, "Resolution", ["12 MP", "48 MP"], 1)}
       ${row(264, "Shape", ["4:3", "16:9", "1:1"], 0)}
-      ${chip(24, "Portrait", glyph.aperture)}${chip(144, "Auto", glyph.wand)}${chip(264, "Manual", glyph.dial)}`;
+      ${row(302, "Timer", ["Off", "3s", "5s", "10s"], 0)}
+      ${chip(24, 334, "Portrait", glyph.aperture, true)}${chip(144, 334, "Auto", glyph.wand)}${chip(264, 334, "Manual", glyph.dial)}
+      ${chip(24, 374, "Live", glyph.live, true)}${chip(144, 374, "Solo", glyph.solo)}`;
   }
 
   function settingsPhone(id, t, dark) {
@@ -662,7 +670,7 @@ footer .wrap { display: flex; gap: 16px; flex-wrap: wrap; justify-content: space
       <rect width="402" height="874" fill="${dark ? "#000000" : "#B9AFA8"}"/>
       <rect x="0" y="56" width="402" height="830" rx="38" fill="${bg}"/>
       <rect x="181" y="64" width="40" height="5" rx="2.5" fill="${muted}" fill-opacity=".5"/>
-      ${text(201, 108, "Settings", 17, ink, 600)}
+      ${text(201, 108, "Appearance", 17, ink, 600)}
       <rect x="320" y="88" width="64" height="34" rx="17" fill="${card}" stroke="${sep}"/>${text(352, 110, "Done", 15, acc, 600)}
       ${text(32, 166, "Appearance", 15, muted, 600, "start")}
       <rect x="16" y="178" width="370" height="132" rx="22" fill="${card}"/>
@@ -673,17 +681,6 @@ footer .wrap { display: flex; gap: 16px; flex-wrap: wrap; justify-content: space
       ${text(32, 340, "App Icon", 15, muted, 600, "start")}
       <rect x="16" y="352" width="370" height="208" rx="22" fill="${card}"/>
       ${icons}
-      ${text(32, 596, "Settings Memory", 15, muted, 600, "start")}
-      <rect x="16" y="608" width="370" height="96" rx="22" fill="${card}"/>
-      ${text(32, 640, "Remember Settings", 16, ink, 400, "start")}
-      <rect x="318" y="623" width="52" height="30" rx="15" fill="${acc}"/><circle cx="355" cy="638" r="13" fill="#FFFFFF"/>
-      <line x1="32" y1="656" x2="386" y2="656" stroke="${sep}"/>
-      ${text(32, 686, "Reset All Settings", 16, "#FF3B30", 400, "start")}
-      ${text(32, 740, "Help", 15, muted, 600, "start")}
-      <rect x="16" y="752" width="370" height="96" rx="22" fill="${card}"/>
-      ${text(32, 784, "Take the Tour", 16, ink, 400, "start")}
-      <line x1="32" y1="800" x2="386" y2="800" stroke="${sep}"/>
-      ${text(32, 830, "User Guide", 16, ink, 400, "start")}
       <rect x="140" y="11" width="122" height="36" rx="18" fill="#000000"/>
       <rect x="134" y="859" width="134" height="5" rx="2.5" fill="${dark ? "#FFFFFF" : "#000000"}" fill-opacity=".85"/>`;
     return frame(id, body, "");
